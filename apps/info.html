@@ -1,0 +1,545 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="dk" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>fire info &mdash; FIRE 1.1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="fire niv" href="niv.html" />
+    <link rel="prev" title="Kommandolinjeprogrammer" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> FIRE
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../konfiguration.html">Konfigurationsfil</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installationsvejledning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datamodel.html">FIREs Datamodel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../for_udviklere.html">Udviklingsguide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Kommandolinjeprogrammer</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">fire info</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#fire-info-infotype">infotype</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fire-info-obstype">obstype</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fire-info-punkt">punkt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fire-info-sag">sag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fire-info-srid">srid</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="niv.html">fire niv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gama.html">fire gama</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gama.html#parameterfil">Parameterfil</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api/modules.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workshop/index.html">Workshop</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">FIRE</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">Kommandolinjeprogrammer</a> &raquo;</li>
+        
+      <li>fire info</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/apps/info.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="fire-info">
+<h1>fire info<a class="headerlink" href="#fire-info" title="Permalink to this headline">¶</a></h1>
+<p>Information om objekter i FIRE</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>fire info <span class="o">[</span>OPTIONS<span class="o">]</span> COMMAND <span class="o">[</span>ARGS<span class="o">]</span>...
+</pre></div>
+</div>
+<div class="section" id="fire-info-infotype">
+<h2>infotype<a class="headerlink" href="#fire-info-infotype" title="Permalink to this headline">¶</a></h2>
+<p>Information om en punktinfotype.</p>
+<p>Eksempler på punktinfotyper: IDENT:GNSS, AFM:diverse, ATTR:beskrivelse.</p>
+<p>Angives INFOTYPE ikke vises en liste med alle tilgængelige punktinfotyper.
+Denne liste kan snævres ind ved at angive starten af et navn på en punktinfotype,
+fx &quot;IDENT&quot; eller &quot;attr&quot;.</p>
+<p>Med tilvalg <cite>--søg/-s</cite> vises punktinfotyper og tilhørende beskrivelser,
+for alle de punktinfotyper, som matcher INFOTYPE et vilkårligt sted i
+enten navn eller beskrivelse.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>fire info infotype <span class="o">[</span>OPTIONS<span class="o">]</span> <span class="o">[</span>INFOTYPE<span class="o">]</span>
+</pre></div>
+</div>
+<p class="rubric">Options</p>
+<dl class="std option">
+<dt id="cmdoption-fire-info-infotype-db">
+<code class="sig-name descname">--db</code><code class="sig-prename descclassname"> &lt;db&gt;</code><a class="headerlink" href="#cmdoption-fire-info-infotype-db" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vælg en specifik databaseforbindelse - default_connection i fire.ini bruges hvis intet vælges.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Options</dt>
+<dd class="field-odd"><p>prod|test</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-info-infotype-m">
+<span id="cmdoption-fire-info-infotype-monokrom"></span><code class="sig-name descname">-m</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--monokrom</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-info-infotype-m" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vis ikke farver i terminalen</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-info-infotype-debug">
+<code class="sig-name descname">--debug</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-info-infotype-debug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vis debug output</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-info-infotype-help">
+<code class="sig-name descname">--help</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-info-infotype-help" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vis denne hjælp tekst</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-info-infotype-s">
+<span id="cmdoption-fire-info-infotype-sog"></span><code class="sig-name descname">-s</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--søg</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-info-infotype-s" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generel søgning i både typenavn og beskrivelse</p>
+</dd></dl>
+
+<p class="rubric">Arguments</p>
+<dl class="std option">
+<dt id="cmdoption-fire-info-infotype-arg-INFOTYPE">
+<span id="cmdoption-fire-info-infotype-arg-infotype"></span><code class="sig-name descname">INFOTYPE</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-info-infotype-arg-INFOTYPE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Optional argument</p>
+</dd></dl>
+
+</div>
+<div class="section" id="fire-info-obstype">
+<h2>obstype<a class="headerlink" href="#fire-info-obstype" title="Permalink to this headline">¶</a></h2>
+<p>Information om en given observationstype</p>
+<p>Anføres <cite>obstype</cite> ikke gives liste af mulige obstyper.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>fire info obstype <span class="o">[</span>OPTIONS<span class="o">]</span> <span class="o">[</span>OBSTYPE<span class="o">]</span>
+</pre></div>
+</div>
+<p class="rubric">Options</p>
+<dl class="std option">
+<dt id="cmdoption-fire-info-obstype-db">
+<code class="sig-name descname">--db</code><code class="sig-prename descclassname"> &lt;db&gt;</code><a class="headerlink" href="#cmdoption-fire-info-obstype-db" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vælg en specifik databaseforbindelse - default_connection i fire.ini bruges hvis intet vælges.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Options</dt>
+<dd class="field-odd"><p>prod|test</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-info-obstype-m">
+<span id="cmdoption-fire-info-obstype-monokrom"></span><code class="sig-name descname">-m</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--monokrom</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-info-obstype-m" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vis ikke farver i terminalen</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-info-obstype-debug">
+<code class="sig-name descname">--debug</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-info-obstype-debug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vis debug output</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-info-obstype-help">
+<code class="sig-name descname">--help</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-info-obstype-help" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vis denne hjælp tekst</p>
+</dd></dl>
+
+<p class="rubric">Arguments</p>
+<dl class="std option">
+<dt id="cmdoption-fire-info-obstype-arg-OBSTYPE">
+<span id="cmdoption-fire-info-obstype-arg-obstype"></span><code class="sig-name descname">OBSTYPE</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-info-obstype-arg-OBSTYPE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Optional argument</p>
+</dd></dl>
+
+</div>
+<div class="section" id="fire-info-punkt">
+<h2>punkt<a class="headerlink" href="#fire-info-punkt" title="Permalink to this headline">¶</a></h2>
+<p>Vis al tilgængelig information om et fikspunkt</p>
+<p>IDENT kan være enhver form for navn et punkt er kendt som, blandt andet
+GNSS stationsnummer, G.I./G.M.-nummer, refnr, landsnummer, uuid osv.</p>
+<p>Søgningen er delvist versalfølsom, men tager højde for minuskler, udeladte
+punktummer og manglende foranstillede nuller, i ofte forekommende, let
+genkendelige tilfælde (GNSS-id, GI/GM-numre, lands- og købstadsnumre).</p>
+<p>Hvis der indgår procenttegn i det søgte punktnavn opfattes disse som
+jokertegn, og søgningen returnerer alle punkter der matcher mønstret.</p>
+<p>Punkt-klassen er omfattende og består af følgende elementer:</p>
+<p>Punkt = Punkt(</p>
+<blockquote>
+<div><p>'geometriobjekter',   -- lokationskoordinat</p>
+<p>'id',                 -- uuid: intern databaseidentifikation</p>
+<p>'koordinater',        -- alle tilgængelige koordinater</p>
+<p>'metadata',           -- øh</p>
+<p>'objektid',           -- databaserækkenummer</p>
+<p>'observationer_fra',  -- alle observationer udført fra punkt</p>
+<p>'observationer_til',  -- alle observationer udført til punkt</p>
+<p>'punktinformationer', -- attributter og punktbeskrivelser</p>
+<p>'registreringfra',    -- oprettelsesdato/registreringsdato</p>
+<p>'registreringtil',    -- invalideringstidspunkt</p>
+<p>'sagsevent',          -- ?? seneste sagsevent??</p>
+<p>'sagseventfraid',     -- sagsevent for punktoprettelsen</p>
+<p>'sagseventtilid',     -- sagsevent for punktinvalideringen</p>
+<p>'slettet'             -- øh</p>
+</div></blockquote>
+<p>)</p>
+<p>Anfører man ikke specifikke tilvalg vises kun basale dele: Attributter og
+punktbeskrivelser + gældende koordinater.</p>
+<p>Tilvalg <cite>--detaljer/-D</cite> udvider med sjældnere brugte informationer</p>
+<p>Tilvalg <cite>--koord/-K</cite> kan sættes til ts, alle, ingen - eller kombinationer:
+fx ts,alle. <cite>alle</cite> tilvælger historiske koordinater, <cite>ts</cite> tilvælger
+tidsseriekoordinater, <a href="#id1"><span class="problematic" id="id2">`</span></a>ingen`fravælger alle koordinatoplysninger.</p>
+<p>Tilvalg <cite>--obs/-O</cite> kan sættes til alle eller niv. Begge tilvælger visning
+af observationer til/fra det søgte punkt. P.t. understøttes kun visning af
+nivellementsobservationer.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>fire info punkt <span class="o">[</span>OPTIONS<span class="o">]</span> IDENT
+</pre></div>
+</div>
+<p class="rubric">Options</p>
+<dl class="std option">
+<dt id="cmdoption-fire-info-punkt-K">
+<span id="cmdoption-fire-info-punkt-k"></span><span id="cmdoption-fire-info-punkt-koord"></span><code class="sig-name descname">-K</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--koord</code><code class="sig-prename descclassname"> &lt;koord&gt;</code><a class="headerlink" href="#cmdoption-fire-info-punkt-K" title="Permalink to this definition">¶</a></dt>
+<dd><p>ts: Udskriv også tidsserier; alle: Udskriv også historiske koordinater; ingen: Udelad alle</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-info-punkt-O">
+<span id="cmdoption-fire-info-punkt-o"></span><span id="cmdoption-fire-info-punkt-obs"></span><code class="sig-name descname">-O</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--obs</code><code class="sig-prename descclassname"> &lt;obs&gt;</code><a class="headerlink" href="#cmdoption-fire-info-punkt-O" title="Permalink to this definition">¶</a></dt>
+<dd><p>niv/alle: Udskriv observationer</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-info-punkt-D">
+<span id="cmdoption-fire-info-punkt-d"></span><span id="cmdoption-fire-info-punkt-detaljeret"></span><code class="sig-name descname">-D</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--detaljeret</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-info-punkt-D" title="Permalink to this definition">¶</a></dt>
+<dd><p>Udskriv også sjældent anvendte elementer</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-info-punkt-n">
+<span id="cmdoption-fire-info-punkt-antal"></span><code class="sig-name descname">-n</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--antal</code><code class="sig-prename descclassname"> &lt;antal&gt;</code><a class="headerlink" href="#cmdoption-fire-info-punkt-n" title="Permalink to this definition">¶</a></dt>
+<dd><p>Begræns antallet af punkter der udskrives</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-info-punkt-db">
+<code class="sig-name descname">--db</code><code class="sig-prename descclassname"> &lt;db&gt;</code><a class="headerlink" href="#cmdoption-fire-info-punkt-db" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vælg en specifik databaseforbindelse - default_connection i fire.ini bruges hvis intet vælges.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Options</dt>
+<dd class="field-odd"><p>prod|test</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-info-punkt-m">
+<span id="cmdoption-fire-info-punkt-monokrom"></span><code class="sig-name descname">-m</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--monokrom</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-info-punkt-m" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vis ikke farver i terminalen</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-info-punkt-debug">
+<code class="sig-name descname">--debug</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-info-punkt-debug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vis debug output</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-info-punkt-help">
+<code class="sig-name descname">--help</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-info-punkt-help" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vis denne hjælp tekst</p>
+</dd></dl>
+
+<p class="rubric">Arguments</p>
+<dl class="std option">
+<dt id="cmdoption-fire-info-punkt-arg-IDENT">
+<span id="cmdoption-fire-info-punkt-arg-ident"></span><code class="sig-name descname">IDENT</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-info-punkt-arg-IDENT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Required argument</p>
+</dd></dl>
+
+</div>
+<div class="section" id="fire-info-sag">
+<h2>sag<a class="headerlink" href="#fire-info-sag" title="Permalink to this headline">¶</a></h2>
+<p>Information om en sag.</p>
+<p>Kaldes <cite>fire info sag</cite> uden sagsid listes alle aktive sager</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>fire info sag <span class="o">[</span>OPTIONS<span class="o">]</span> <span class="o">[</span>SAGSID<span class="o">]</span>
+</pre></div>
+</div>
+<p class="rubric">Options</p>
+<dl class="std option">
+<dt id="cmdoption-fire-info-sag-db">
+<code class="sig-name descname">--db</code><code class="sig-prename descclassname"> &lt;db&gt;</code><a class="headerlink" href="#cmdoption-fire-info-sag-db" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vælg en specifik databaseforbindelse - default_connection i fire.ini bruges hvis intet vælges.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Options</dt>
+<dd class="field-odd"><p>prod|test</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-info-sag-m">
+<span id="cmdoption-fire-info-sag-monokrom"></span><code class="sig-name descname">-m</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--monokrom</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-info-sag-m" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vis ikke farver i terminalen</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-info-sag-debug">
+<code class="sig-name descname">--debug</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-info-sag-debug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vis debug output</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-info-sag-help">
+<code class="sig-name descname">--help</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-info-sag-help" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vis denne hjælp tekst</p>
+</dd></dl>
+
+<p class="rubric">Arguments</p>
+<dl class="std option">
+<dt id="cmdoption-fire-info-sag-arg-SAGSID">
+<span id="cmdoption-fire-info-sag-arg-sagsid"></span><code class="sig-name descname">SAGSID</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-info-sag-arg-SAGSID" title="Permalink to this definition">¶</a></dt>
+<dd><p>Optional argument</p>
+</dd></dl>
+
+</div>
+<div class="section" id="fire-info-srid">
+<h2>srid<a class="headerlink" href="#fire-info-srid" title="Permalink to this headline">¶</a></h2>
+<p>Information om et givent SRID (Spatial Reference ID)</p>
+<p>Eksempler på SRID'er: EPSG:25832, DK:SYS34, TS:81013</p>
+<p>Anføres SRID ikke gives liste af mulige SRID. Som standard uden lokale
+tidsseriekoordinatsystemer.</p>
+<p>Tilvalg <a href="#id3"><span class="problematic" id="id4">``</span></a>-T/--ts` kan kun vælges uden angiven SRID. Udvider listen med
+lokale tidsseriekoordinatsystemer.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>fire info srid <span class="o">[</span>OPTIONS<span class="o">]</span> <span class="o">[</span>SRID<span class="o">]</span>
+</pre></div>
+</div>
+<p class="rubric">Options</p>
+<dl class="std option">
+<dt id="cmdoption-fire-info-srid-T">
+<span id="cmdoption-fire-info-srid-t"></span><span id="cmdoption-fire-info-srid-ts"></span><code class="sig-name descname">-T</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--ts</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-info-srid-T" title="Permalink to this definition">¶</a></dt>
+<dd><p>Udskriv også tidsrækkedefinitioner</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-info-srid-db">
+<code class="sig-name descname">--db</code><code class="sig-prename descclassname"> &lt;db&gt;</code><a class="headerlink" href="#cmdoption-fire-info-srid-db" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vælg en specifik databaseforbindelse - default_connection i fire.ini bruges hvis intet vælges.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Options</dt>
+<dd class="field-odd"><p>prod|test</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-info-srid-m">
+<span id="cmdoption-fire-info-srid-monokrom"></span><code class="sig-name descname">-m</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--monokrom</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-info-srid-m" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vis ikke farver i terminalen</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-info-srid-debug">
+<code class="sig-name descname">--debug</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-info-srid-debug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vis debug output</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-info-srid-help">
+<code class="sig-name descname">--help</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-info-srid-help" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vis denne hjælp tekst</p>
+</dd></dl>
+
+<p class="rubric">Arguments</p>
+<dl class="std option">
+<dt id="cmdoption-fire-info-srid-arg-SRID">
+<span id="cmdoption-fire-info-srid-arg-srid"></span><code class="sig-name descname">SRID</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-info-srid-arg-SRID" title="Permalink to this definition">¶</a></dt>
+<dd><p>Optional argument</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="niv.html" class="btn btn-neutral float-right" title="fire niv" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Kommandolinjeprogrammer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019, Asger Sigurd Skovbo Petersen, Björn Harrtell, Kristian Evers.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

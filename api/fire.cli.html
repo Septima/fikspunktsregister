@@ -1,0 +1,454 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="dk" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>fire.cli package &mdash; FIRE 1.1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Workshop" href="../workshop/index.html" />
+    <link rel="prev" title="fire.api.model package" href="fire.api.model.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> FIRE
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../konfiguration.html">Konfigurationsfil</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installationsvejledning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datamodel.html">FIREs Datamodel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../for_udviklere.html">Udviklingsguide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apps/index.html">Kommandolinjeprogrammer</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">API</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="fire.html">fire package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="fire.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="fire.api.html">fire.api package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">fire.cli package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="fire.html#module-fire">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../workshop/index.html">Workshop</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">FIRE</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">API</a> &raquo;</li>
+        
+          <li><a href="fire.html">fire package</a> &raquo;</li>
+        
+      <li>fire.cli package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/api/fire.cli.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="fire-cli-package">
+<h1>fire.cli package<a class="headerlink" href="#fire-cli-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-fire.cli.gama">
+<span id="submodules"></span><h2>Submodules<a class="headerlink" href="#module-fire.cli.gama" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="module-fire.cli.info"></span><dl class="py function">
+<dt id="fire.cli.info.koordinat_linje">
+<code class="sig-prename descclassname">fire.cli.info.</code><code class="sig-name descname">koordinat_linje</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">koord</span><span class="p">:</span> <span class="n"><a class="reference internal" href="fire.api.model.html#fire.api.model.punkttyper.Koordinat" title="fire.api.model.punkttyper.Koordinat">fire.api.model.punkttyper.Koordinat</a></span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#fire.cli.info.koordinat_linje" title="Permalink to this definition">¶</a></dt>
+<dd><p>Konstruer koordinatoutput i overensstemmelse med koordinatens dimensionalitet,
+enhed og proveniens.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="fire.cli.info.koordinatrapport">
+<code class="sig-prename descclassname">fire.cli.info.</code><code class="sig-name descname">koordinatrapport</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">koordinater</span><span class="p">:</span> <span class="n">List<span class="p">[</span><a class="reference internal" href="fire.api.model.html#fire.api.model.punkttyper.Koordinat" title="fire.api.model.punkttyper.Koordinat">fire.api.model.punkttyper.Koordinat</a><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">options</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#fire.cli.info.koordinatrapport" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hjælpefunktion for 'punkt_fuld_rapport': Udskriv formateret koordinatliste</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="fire.cli.info.observation_linje">
+<code class="sig-prename descclassname">fire.cli.info.</code><code class="sig-name descname">observation_linje</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">obs</span><span class="p">:</span> <span class="n"><a class="reference internal" href="fire.api.model.html#fire.api.model.punkttyper.Observation" title="fire.api.model.punkttyper.Observation">fire.api.model.punkttyper.Observation</a></span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#fire.cli.info.observation_linje" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="fire.cli.info.observationsrapport">
+<code class="sig-prename descclassname">fire.cli.info.</code><code class="sig-name descname">observationsrapport</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">observationer_til</span><span class="p">:</span> <span class="n">List<span class="p">[</span><a class="reference internal" href="fire.api.model.html#fire.api.model.punkttyper.Observation" title="fire.api.model.punkttyper.Observation">fire.api.model.punkttyper.Observation</a><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">observationer_fra</span><span class="p">:</span> <span class="n">List<span class="p">[</span><a class="reference internal" href="fire.api.model.html#fire.api.model.punkttyper.Observation" title="fire.api.model.punkttyper.Observation">fire.api.model.punkttyper.Observation</a><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">options</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opt_detaljeret</span><span class="p">:</span> <span class="n">bool</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#fire.cli.info.observationsrapport" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hjælpefunktion for 'punkt_fuld_rapport': Udskriv formateret observationsliste</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="fire.cli.info.punkt_fuld_rapport">
+<code class="sig-prename descclassname">fire.cli.info.</code><code class="sig-name descname">punkt_fuld_rapport</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">punkt</span><span class="p">:</span> <span class="n"><a class="reference internal" href="fire.api.model.html#fire.api.model.punkttyper.Punkt" title="fire.api.model.punkttyper.Punkt">fire.api.model.punkttyper.Punkt</a></span></em>, <em class="sig-param"><span class="n">ident</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">i</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">n</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">opt_obs</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opt_koord</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opt_detaljeret</span><span class="p">:</span> <span class="n">bool</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#fire.cli.info.punkt_fuld_rapport" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rapportgenerator for funktionen 'punkt' nedenfor.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="fire.cli.info.punktinforapport">
+<code class="sig-prename descclassname">fire.cli.info.</code><code class="sig-name descname">punktinforapport</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">punktinformationer</span><span class="p">:</span> <span class="n">List<span class="p">[</span><a class="reference internal" href="fire.api.model.html#fire.api.model.punkttyper.PunktInformation" title="fire.api.model.punkttyper.PunktInformation">fire.api.model.punkttyper.PunktInformation</a><span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#fire.cli.info.punktinforapport" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hjælpefunktion for 'punkt_fuld_rapport'.</p>
+</dd></dl>
+
+<span class="target" id="module-fire.cli.main"></span><p>Hovedindgang for kommondalinjeinterface til FIRE.</p>
+<span class="target" id="module-fire.cli.niv"></span><dl class="py function">
+<dt id="fire.cli.niv.anvendte">
+<code class="sig-prename descclassname">fire.cli.niv.</code><code class="sig-name descname">anvendte</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arkdef</span><span class="p">:</span> <span class="n">Dict</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#fire.cli.niv.anvendte" title="Permalink to this definition">¶</a></dt>
+<dd><p>Anvendte søjler for given arkdef</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="fire.cli.niv.bekraeft">
+<span id="fire.cli.niv.bekræft"></span><code class="sig-prename descclassname">fire.cli.niv.</code><code class="sig-name descname">bekræft</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">spørgsmål</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">gentag</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#fire.cli.niv.bekraeft" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bed bruger om at tage stilling til spørgsmålet.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="fire.cli.niv.find_faneblad">
+<code class="sig-prename descclassname">fire.cli.niv.</code><code class="sig-name descname">find_faneblad</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">projektnavn</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">faneblad</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">arkdef</span><span class="p">:</span> <span class="n">Dict</span></em>, <em class="sig-param"><span class="n">ignore_failure</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span> &#x2192; pandas.core.frame.DataFrame<a class="headerlink" href="#fire.cli.niv.find_faneblad" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="fire.cli.niv.find_parameter">
+<code class="sig-prename descclassname">fire.cli.niv.</code><code class="sig-name descname">find_parameter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">projektnavn</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">parameter</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#fire.cli.niv.find_parameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find parameter fra et projektregneark</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="fire.cli.niv.find_sag">
+<code class="sig-prename descclassname">fire.cli.niv.</code><code class="sig-name descname">find_sag</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">projektnavn</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="fire.api.model.html#fire.api.model.sagstyper.Sag" title="fire.api.model.sagstyper.Sag">fire.api.model.sagstyper.Sag</a><a class="headerlink" href="#fire.cli.niv.find_sag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bomb hvis sag for projektnavn ikke er oprettet. Ellers returnér sagen</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="fire.cli.niv.find_sagsgang">
+<code class="sig-prename descclassname">fire.cli.niv.</code><code class="sig-name descname">find_sagsgang</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">projektnavn</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; pandas.core.frame.DataFrame<a class="headerlink" href="#fire.cli.niv.find_sagsgang" title="Permalink to this definition">¶</a></dt>
+<dd><p>Udtræk sagsgangsregneark fra Excelmappe</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="fire.cli.niv.find_sagsid">
+<code class="sig-prename descclassname">fire.cli.niv.</code><code class="sig-name descname">find_sagsid</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sagsgang</span><span class="p">:</span> <span class="n">pandas.core.frame.DataFrame</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#fire.cli.niv.find_sagsid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="fire.cli.niv.gron">
+<span id="fire.cli.niv.grøn"></span><code class="sig-prename descclassname">fire.cli.niv.</code><code class="sig-name descname">grøn</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">tekst</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.cli.niv.gron" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="fire.cli.niv.gyldighedstidspunkt">
+<code class="sig-prename descclassname">fire.cli.niv.</code><code class="sig-name descname">gyldighedstidspunkt</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">projektnavn</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; datetime.datetime<a class="headerlink" href="#fire.cli.niv.gyldighedstidspunkt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tid for sidste observation der har været brugt i beregningen</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="fire.cli.niv.normaliser_lokationskoordinat">
+<code class="sig-prename descclassname">fire.cli.niv.</code><code class="sig-name descname">normaliser_lokationskoordinat</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">λ</span><span class="p">:</span> <span class="n">float</span></em>, <em class="sig-param"><span class="n">φ</span><span class="p">:</span> <span class="n">float</span></em>, <em class="sig-param"><span class="n">region</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'DK'</span></em>, <em class="sig-param"><span class="n">invers</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span> &#x2192; Tuple<span class="p">[</span>float<span class="p">, </span>float<span class="p">]</span><a class="headerlink" href="#fire.cli.niv.normaliser_lokationskoordinat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check op på lokationskoordinaterne.
+En normaliseret lokationskoordinat er en koordinat der egner sig som
+WKT- og/eller geojson-geometriobjekt. Dvs. en koordinat anført i en
+afart af WGS84 og med akseorden længde, bredde (λ, φ).</p>
+<p>Hvis det ser ud som om akseordenen er gal, så bytter vi om på dem.</p>
+<p>Hvis input ligner UTM, så regner vi om til geografiske koordinater.
+NaN og 0 flyttes ud i Kattegat, så man kan få øje på dem.</p>
+<p>Disse korrektioner udføres med brug af bredt gyldige heuristikker,
+der dog er nødt til at gøre antagelser om hvor i verden vi befinder os.
+Dette kan eksplicit anføres med argumentet <cite>region</cite>, der som standard
+sættes til <cite>&quot;DK&quot;</cite>.</p>
+<p>Den omvendte vej (<cite>invers==True</cite>, input: geografiske koordinater,
+output: UTM-koordinater i traditionel lokationskoordinatorden)
+er indtil videre kun understøttet for <cite>region==&quot;DK&quot;</cite>.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="fire.cli.niv.opret_region_punktinfo">
+<code class="sig-prename descclassname">fire.cli.niv.</code><code class="sig-name descname">opret_region_punktinfo</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">punkt</span><span class="p">:</span> <span class="n"><a class="reference internal" href="fire.api.model.html#fire.api.model.punkttyper.Punkt" title="fire.api.model.punkttyper.Punkt">fire.api.model.punkttyper.Punkt</a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="fire.api.model.html#fire.api.model.punkttyper.PunktInformation" title="fire.api.model.punkttyper.PunktInformation">fire.api.model.punkttyper.PunktInformation</a><a class="headerlink" href="#fire.cli.niv.opret_region_punktinfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Opret regionspunktinfo for et nyt punkt</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="fire.cli.niv.punkt_feature">
+<code class="sig-prename descclassname">fire.cli.niv.</code><code class="sig-name descname">punkt_feature</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">punkter</span><span class="p">:</span> <span class="n">pandas.core.frame.DataFrame</span></em><span class="sig-paren">)</span> &#x2192; Dict<span class="p">[</span>str<span class="p">, </span>str<span class="p">]</span><a class="headerlink" href="#fire.cli.niv.punkt_feature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Omsæt punktinformationer til JSON-egnet dict</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="fire.cli.niv.punkter_geojson">
+<code class="sig-prename descclassname">fire.cli.niv.</code><code class="sig-name descname">punkter_geojson</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">projektnavn</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">punkter</span><span class="p">:</span> <span class="n">pandas.core.frame.DataFrame</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#fire.cli.niv.punkter_geojson" title="Permalink to this definition">¶</a></dt>
+<dd><p>Skriv punkter/koordinater i geojson-format</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="fire.cli.niv.skriv_ark">
+<code class="sig-prename descclassname">fire.cli.niv.</code><code class="sig-name descname">skriv_ark</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">projektnavn</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">nye_faneblade</span><span class="p">:</span> <span class="n">Dict<span class="p">[</span>str<span class="p">, </span>pandas.core.frame.DataFrame<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">suffix</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">''</span></em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#fire.cli.niv.skriv_ark" title="Permalink to this definition">¶</a></dt>
+<dd><p>Skriv resultater til excel-fil</p>
+<p>Basalt en temmeligt simpel operation, men virkemåden er næsten overskygget af
+kontroller af at filoperationer gik godt. Det er et vilkår ved interaktioner
+med filsystemer, så for overblikkets skyld kommer her en kort prosabeskrivelse.</p>
+<ol class="arabic simple">
+<li><p>Flyt projektnavn.xlsx til projektnavn-ex.xlsx</p></li>
+<li><p>Læs dict gamle_faneblade fra projektnavn-ex.xlsx</p></li>
+<li><p>Fjern elementer fra gamle_faneblade hvis navnet også findes i nye_faneblade</p></li>
+<li><p>Skriv nye_faneblade til projektnavn.xlsx</p></li>
+<li><p>Skriv gamle_faneblade til projektnavn.xlsx</p></li>
+</ol>
+<p>Trin 4 kommer før trin 5 for at sikre at de nye faneblade er umiddelbart
+synlige når man åbner projektnavn.xlsx</p>
+<p>Eller mere direkte sagt:</p>
+<p><a href="#id1"><span class="problematic" id="id2">``</span></a>`
+fil = Path(f&quot;{projektnavn}{suffix}.xlsx&quot;)
+exfil = Path(f&quot;{projektnavn}{suffix}-ex.xlsx&quot;)
+fil.replace(exfil)</p>
+<p>gamle_faneblade = pd.read_excel(exfil, sheet_name=None)
+for fanebladnavn in set(gamle_faneblade).intersection(nye_faneblade):</p>
+<blockquote>
+<div><p>gamle_faneblade.pop(fanebladnavn)</p>
+</div></blockquote>
+<dl class="simple">
+<dt>with pd.ExcelWriter(fil) as writer:</dt><dd><p>skriv nye_faneblade
+skriv gamle_faneblade</p>
+</dd>
+</dl>
+<p><a href="#id3"><span class="problematic" id="id4">``</span></a><a href="#id5"><span class="problematic" id="id6">`</span></a></p>
+<p>Hvilket er i omegnen af en faktor 10 mindre end den implementerede
+version - men <em>it's a jungle out there</em>...</p>
+</dd></dl>
+
+<span class="target" id="module-fire.cli.utils"></span><p>Diverse redskaber til brug i fire.cli.</p>
+<dl class="py class">
+<dt id="fire.cli.utils.Datetime">
+<em class="property">class </em><code class="sig-prename descclassname">fire.cli.utils.</code><code class="sig-name descname">Datetime</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">format</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.cli.utils.Datetime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">click.types.ParamType</span></code></p>
+<p>A datetime object parsed via datetime.strptime.
+Format specifiers can be found here :
+<a class="reference external" href="https://docs.python.org/3/library/datetime.html#strftime-strptime-behavior">https://docs.python.org/3/library/datetime.html#strftime-strptime-behavior</a></p>
+<p>Stolen from
+<a class="reference external" href="https://github.com/click-contrib/click-datetime/blob/master/click_datetime/__init__.py">https://github.com/click-contrib/click-datetime/blob/master/click_datetime/__init__.py</a></p>
+<dl class="py method">
+<dt id="fire.cli.utils.Datetime.convert">
+<code class="sig-name descname">convert</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em>, <em class="sig-param"><span class="n">param</span></em>, <em class="sig-param"><span class="n">ctx</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.cli.utils.Datetime.convert" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts the value.  This is not invoked for values that are
+<cite>None</cite> (the missing value).</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.cli.utils.Datetime.name">
+<code class="sig-name descname">name</code><em class="property"> = 'date'</em><a class="headerlink" href="#fire.cli.utils.Datetime.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="fire.cli.utils.klargor_ident_til_sogning">
+<span id="fire.cli.utils.klargør_ident_til_søgning"></span><code class="sig-prename descclassname">fire.cli.utils.</code><code class="sig-name descname">klargør_ident_til_søgning</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ident</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#fire.cli.utils.klargor_ident_til_sogning" title="Permalink to this definition">¶</a></dt>
+<dd><p>Oversættelse af almindelige &quot;fejl&quot;-stavelser af identer, fx gi istedet for G.I.,
+forud for søgning efter punkter.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-fire.cli">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-fire.cli" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="fire.cli.default_options">
+<code class="sig-prename descclassname">fire.cli.</code><code class="sig-name descname">default_options</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.cli.default_options" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="fire.cli.override_firedb">
+<code class="sig-prename descclassname">fire.cli.</code><code class="sig-name descname">override_firedb</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">new_firedb</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.cli.override_firedb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tillad at bruge en anden firedb end den der oprettes automatisk af
+fire.cli.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="fire.cli.print">
+<code class="sig-prename descclassname">fire.cli.</code><code class="sig-name descname">print</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.cli.print" title="Permalink to this definition">¶</a></dt>
+<dd><p>FIRE-specifik print funktion baseret på click.secho.</p>
+<p>Tilsidesætter farven når --monokrom parameteren anvendes i
+kommandolinjekald.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../workshop/index.html" class="btn btn-neutral float-right" title="Workshop" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="fire.api.model.html" class="btn btn-neutral float-left" title="fire.api.model package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019, Asger Sigurd Skovbo Petersen, Björn Harrtell, Kristian Evers.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

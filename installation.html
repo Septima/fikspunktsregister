@@ -1,0 +1,374 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="dk" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Installationsvejledning &mdash; FIRE 1.1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="FIREs Datamodel" href="datamodel.html" />
+    <link rel="prev" title="Konfigurationsfil" href="konfiguration.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> FIRE
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="konfiguration.html">Konfigurationsfil</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installationsvejledning</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#generelt">Generelt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#git">Git</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#oracle-instantclient">Oracle Instantclient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#conda">Conda</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fire">FIRE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#flame-qgis-plugin">Flame - QGIS plugin</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="datamodel.html">FIREs Datamodel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="for_udviklere.html">Udviklingsguide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apps/index.html">Kommandolinjeprogrammer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/modules.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workshop/index.html">Workshop</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">FIRE</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Installationsvejledning</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/installation.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="installationsvejledning">
+<span id="installation"></span><h1>Installationsvejledning<a class="headerlink" href="#installationsvejledning" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="generelt">
+<h2>Generelt<a class="headerlink" href="#generelt" title="Permalink to this headline">¶</a></h2>
+<p>Som grundlag for alt programmel der installeres i forbindelse med FIRE benyttes
+Conda. Conda er et værktøj der oprindeligt er udviklet til
+Python-udviklere med henblik på nemt at kunne installere moduler og holde styr
+på forskellige versioner af samme modul. I dag er Conda et mere generelt
+værktøj som gør det nemt at installere mange forskellige programmer. Læs mere om
+Conda <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html">her</a></p>
+</div>
+<div class="section" id="id1">
+<h2>Installation<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Der er en række trin der skal gennemføres for at få en komplet installation.
+Herunder tager vi dem et ad gangen</p>
+<div class="section" id="git">
+<h3>Git<a class="headerlink" href="#git" title="Permalink to this headline">¶</a></h3>
+<p>Installer Git fra Software Centeret. Åbn &quot;Software Center&quot; via Startmenuen. Søg
+efter &quot;git&quot; og installer det.</p>
+<a class="reference internal image-reference" href="_images/gitfrasoftwarecenter.PNG"><img alt="Git i softwarecenter" src="_images/gitfrasoftwarecenter.PNG" style="width: 800px;" /></a>
+</div>
+<div class="section" id="oracle-instantclient">
+<h3>Oracle Instantclient<a class="headerlink" href="#oracle-instantclient" title="Permalink to this headline">¶</a></h3>
+<p>Installer Oracle instantclient fra Software Centeret. Åben &quot;Software Center&quot; via Startmenuen.
+Søg efter &quot;Oracle&quot;, der dukker flere muligheder op. Den korrekte er
+&quot;Oracle 12.1.0.1 Client 64bit - Install&quot; (versionsnummeret er muligvis anderledes). Følg
+instruktionerne på skærmen.</p>
+<a class="reference internal image-reference" href="_images/oraclefrasoftwarecenter.PNG"><img alt="Oracle i softwarecenter" src="_images/oraclefrasoftwarecenter.PNG" style="width: 800px;" /></a>
+</div>
+<div class="section" id="conda">
+<h3>Conda<a class="headerlink" href="#conda" title="Permalink to this headline">¶</a></h3>
+<p>Download og kør <a class="reference external" href="https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe">Miniconda3-latest-Windows-x86_64.exe</a>.</p>
+<a class="reference internal image-reference" href="_images/miniconda_start.PNG"><img alt="Miniconda" src="_images/miniconda_start.PNG" style="width: 400px;" /></a>
+<p>Installationen er forholdsvis triviel, og man kan trykke &quot;next&quot; i alle trin og
+slutte af med &quot;install&quot;. Det indbefatter at Conda kun installeres til den
+lokale bruger (&quot;just me&quot;) og at ingen af de avancerede muligheder slås til.</p>
+<a class="reference internal image-reference" href="_images/miniconda_just_me.PNG"><img alt="Miniconda - just me" src="_images/miniconda_just_me.PNG" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="_images/miniconda_bibliotek.PNG"><img alt="Miniconda bibliotek" src="_images/miniconda_bibliotek.PNG" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="_images/miniconda_advanced.PNG"><img alt="Miniconda advanced" src="_images/miniconda_advanced.PNG" style="width: 400px;" /></a>
+<p>Når Conda er installeret kan du nu i start menuen finde &quot;Anaconda Prompt
+(miniconda3)&quot; Alle efterfølgende kommandoer i denne installationsvejledning skal
+afvikles i denne terminal. Det anbefales at lave en genvej til &quot;Anaconda Prompt&quot;
+i Windows' proceslinjen (åben programmet, højreklik på ikonet i proceslinjen,
+vælg &quot;fastgør til proceslinje&quot;).</p>
+</div>
+<div class="section" id="fire">
+<h3>FIRE<a class="headerlink" href="#fire" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Det er for nuværende mere kompliceret at installere koden end det bliver i fremtiden.
+Hav tålmodighed, der er smartere løsninger på vej!</p>
+</div>
+<p>Åbn &quot;Anaconda Prompt&quot;. Start med at lave en ny mappe til FIRE koden og download
+den med git</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">base</span><span class="p">)</span> <span class="n">C</span><span class="p">:</span>\<span class="o">&gt;</span><span class="n">mkdir</span> <span class="n">FIRE</span>
+
+<span class="p">(</span><span class="n">base</span><span class="p">)</span> <span class="n">C</span><span class="p">:</span>\<span class="o">&gt;</span><span class="n">cd</span> <span class="n">FIRE</span>
+
+<span class="p">(</span><span class="n">base</span><span class="p">)</span> <span class="n">C</span><span class="p">:</span>\<span class="n">FIRE</span><span class="o">&gt;</span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">Kortforsyningen</span><span class="o">/</span><span class="n">FIRE</span><span class="o">.</span><span class="n">git</span> <span class="o">.</span>
+<span class="n">Cloning</span> <span class="n">into</span> <span class="s1">&#39;.&#39;</span><span class="o">...</span>
+<span class="n">remote</span><span class="p">:</span> <span class="n">Enumerating</span> <span class="n">objects</span><span class="p">:</span> <span class="mi">4175</span><span class="p">,</span> <span class="n">done</span><span class="o">.</span>
+<span class="n">remote</span><span class="p">:</span> <span class="n">Counting</span> <span class="n">objects</span><span class="p">:</span> <span class="mi">100</span><span class="o">%</span> <span class="p">(</span><span class="mi">343</span><span class="o">/</span><span class="mi">343</span><span class="p">),</span> <span class="n">done</span><span class="o">.</span>
+<span class="n">remote</span><span class="p">:</span> <span class="n">Compressing</span> <span class="n">objects</span><span class="p">:</span> <span class="mi">100</span><span class="o">%</span> <span class="p">(</span><span class="mi">147</span><span class="o">/</span><span class="mi">147</span><span class="p">),</span> <span class="n">done</span><span class="o">.</span>
+<span class="n">remote</span><span class="p">:</span> <span class="n">Total</span> <span class="mi">4175</span> <span class="p">(</span><span class="n">delta</span> <span class="mi">208</span><span class="p">),</span> <span class="n">reused</span> <span class="mi">313</span> <span class="p">(</span><span class="n">delta</span> <span class="mi">190</span><span class="p">),</span> <span class="n">pack</span><span class="o">-</span><span class="n">reused</span> <span class="mi">3832</span>
+<span class="n">Receiving</span> <span class="n">objects</span><span class="p">:</span> <span class="mi">100</span><span class="o">%</span> <span class="p">(</span><span class="mi">4175</span><span class="o">/</span><span class="mi">4175</span><span class="p">),</span> <span class="mf">22.54</span> <span class="n">MiB</span> <span class="o">|</span> <span class="mf">3.66</span> <span class="n">MiB</span><span class="o">/</span><span class="n">s</span><span class="p">,</span> <span class="n">done</span><span class="o">.</span>
+<span class="n">Resolving</span> <span class="n">deltas</span><span class="p">:</span> <span class="mi">100</span><span class="o">%</span> <span class="p">(</span><span class="mi">2512</span><span class="o">/</span><span class="mi">2512</span><span class="p">),</span> <span class="n">done</span><span class="o">.</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Bemærk det afsluttende punktum i <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code> kommandoen. Det sørger for at din installation placeres i C:\FIRE.</p>
+</div>
+<p>Initialiser et &quot;conda miljø&quot; til FIRE (vær tålmodig, det kan godt tage lang tid)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">base</span><span class="p">)</span> <span class="n">C</span><span class="p">:</span>\<span class="n">FIRE</span><span class="o">&gt;</span><span class="n">conda</span> <span class="n">env</span> <span class="n">create</span> <span class="o">--</span><span class="n">file</span> <span class="n">environment</span><span class="o">.</span><span class="n">yml</span>
+<span class="n">Collecting</span> <span class="n">package</span> <span class="n">metadata</span> <span class="p">(</span><span class="n">repodata</span><span class="o">.</span><span class="n">json</span><span class="p">):</span> <span class="n">done</span>
+<span class="n">Solving</span> <span class="n">environment</span><span class="p">:</span> <span class="n">done</span>
+
+<span class="n">Downloading</span> <span class="ow">and</span> <span class="n">Extracting</span> <span class="n">Packages</span>
+<span class="n">cryptography</span><span class="o">-</span><span class="mf">3.4.7</span>   <span class="o">|</span> <span class="mi">705</span> <span class="n">KB</span>    <span class="o">|</span> <span class="c1">############################################################################ | 100%</span>
+<span class="n">libcurl</span><span class="o">-</span><span class="mf">7.76.1</span>       <span class="o">|</span> <span class="mi">292</span> <span class="n">KB</span>    <span class="o">|</span> <span class="c1">############################################################################ | 100%</span>
+
+<span class="o">...</span>
+
+<span class="n">coverage</span><span class="o">-</span><span class="mf">5.5</span>         <span class="o">|</span> <span class="mi">285</span> <span class="n">KB</span>    <span class="o">|</span> <span class="c1">############################################################################ | 100%</span>
+<span class="n">libzip</span><span class="o">-</span><span class="mf">1.7.3</span>         <span class="o">|</span> <span class="mi">134</span> <span class="n">KB</span>    <span class="o">|</span> <span class="c1">############################################################################ | 100%</span>
+<span class="n">Preparing</span> <span class="n">transaction</span><span class="p">:</span> <span class="n">done</span>
+<span class="n">Verifying</span> <span class="n">transaction</span><span class="p">:</span> <span class="n">done</span>
+<span class="n">Executing</span> <span class="n">transaction</span><span class="p">:</span> <span class="n">done</span>
+<span class="c1">#</span>
+<span class="c1"># To activate this environment, use</span>
+<span class="c1">#</span>
+<span class="c1">#     $ conda activate fire</span>
+<span class="c1">#</span>
+<span class="c1"># To deactivate an active environment, use</span>
+<span class="c1">#</span>
+<span class="c1">#     $ conda deactivate</span>
+</pre></div>
+</div>
+<p>Efter endt installation gør da som <code class="docutils literal notranslate"><span class="pre">conda</span></code> siger og aktiver dit nye &quot;fire environment&quot;</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">base</span><span class="p">)</span> <span class="n">C</span><span class="p">:</span>\<span class="n">FIRE</span><span class="o">&gt;</span><span class="n">conda</span> <span class="n">activate</span> <span class="n">fire</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Bemærk at <code class="docutils literal notranslate"><span class="pre">(base)</span></code> nu er ændret til <code class="docutils literal notranslate"><span class="pre">(fire)</span></code> i kommandolineprompten.
+Det betyder at dit fire-miljø nu er aktivt.</p>
+</div>
+<p>For at FIRE kan forbinde til databasen er det nødvendigt at tilføje en
+<a class="reference internal" href="konfiguration.html#konfigurationsfil"><span class="std std-ref">konfigurationsfil</span></a> til systemet hvori adgangsinformation
+til databasen er registreret. Placer den i mappen <code class="docutils literal notranslate"><span class="pre">C:\Users\&lt;brugernavn&gt;</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Tag fat i en kollega for at få oplyst brugernavn, adgangskode osv.</p>
+</div>
+<p>Med konfigurationsfilen på plads kan vi nu installere FIRE:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">fire</span><span class="p">)</span> <span class="n">C</span><span class="p">:</span>\<span class="n">FIRE</span><span class="o">&gt;</span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">e</span> <span class="o">.</span>
+<span class="n">Obtaining</span> <span class="n">file</span><span class="p">:</span><span class="o">///</span><span class="n">C</span><span class="p">:</span><span class="o">/</span><span class="n">FIRE</span>
+<span class="n">Requirement</span> <span class="n">already</span> <span class="n">satisfied</span><span class="p">:</span> <span class="n">cx_Oracle</span><span class="o">&gt;=</span><span class="mf">7.0</span> <span class="ow">in</span> <span class="n">c</span><span class="p">:</span>\<span class="n">users</span>\<span class="n">b012349</span>\<span class="n">appdata</span>\<span class="n">local</span>\<span class="n">continuum</span>\<span class="n">miniconda3</span>\<span class="n">envs</span>\<span class="n">fire</span>\<span class="n">lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span> <span class="p">(</span><span class="kn">from</span> <span class="nn">fire</span><span class="o">==</span><span class="mf">1.0.1</span><span class="p">)</span> <span class="p">(</span><span class="mf">7.0.0</span><span class="p">)</span>
+<span class="n">Requirement</span> <span class="n">already</span> <span class="n">satisfied</span><span class="p">:</span> <span class="n">sqlalchemy</span><span class="o">&gt;=</span><span class="mf">1.2.13</span> <span class="ow">in</span> <span class="n">c</span><span class="p">:</span>\<span class="n">users</span>\<span class="n">b012349</span>\<span class="n">appdata</span>\<span class="n">local</span>\<span class="n">continuum</span>\<span class="n">miniconda3</span>\<span class="n">envs</span>\<span class="n">fire</span>\<span class="n">lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span> <span class="p">(</span><span class="kn">from</span> <span class="nn">fire</span><span class="o">==</span><span class="mf">1.0.1</span><span class="p">)</span> <span class="p">(</span><span class="mf">1.2.18</span><span class="p">)</span>
+<span class="n">Requirement</span> <span class="n">already</span> <span class="n">satisfied</span><span class="p">:</span> <span class="n">click</span> <span class="ow">in</span> <span class="n">c</span><span class="p">:</span>\<span class="n">users</span>\<span class="n">b012349</span>\<span class="n">appdata</span>\<span class="n">local</span>\<span class="n">continuum</span>\<span class="n">miniconda3</span>\<span class="n">envs</span>\<span class="n">fire</span>\<span class="n">lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span> <span class="p">(</span><span class="kn">from</span> <span class="nn">fire</span><span class="o">==</span><span class="mf">1.0.1</span><span class="p">)</span> <span class="p">(</span><span class="mf">7.1.2</span><span class="p">)</span>
+<span class="n">Collecting</span> <span class="n">click_plugins</span>
+  <span class="n">Using</span> <span class="n">cached</span> <span class="n">click_plugins</span><span class="o">-</span><span class="mf">1.1.1</span><span class="o">-</span><span class="n">py2</span><span class="o">.</span><span class="n">py3</span><span class="o">-</span><span class="n">none</span><span class="o">-</span><span class="nb">any</span><span class="o">.</span><span class="n">whl</span> <span class="p">(</span><span class="mf">7.5</span> <span class="n">kB</span><span class="p">)</span>
+<span class="n">Installing</span> <span class="n">collected</span> <span class="n">packages</span><span class="p">:</span> <span class="n">click</span><span class="o">-</span><span class="n">plugins</span><span class="p">,</span> <span class="n">fire</span>
+  <span class="n">Running</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">develop</span> <span class="k">for</span> <span class="n">fire</span>
+<span class="n">Successfully</span> <span class="n">installed</span> <span class="n">click</span><span class="o">-</span><span class="n">plugins</span><span class="o">-</span><span class="mf">1.1.1</span> <span class="n">fire</span><span class="o">-</span><span class="mf">1.1.0</span>
+</pre></div>
+</div>
+<p>Bekræft at installation er gennemført korrekt</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">fire</span><span class="p">)</span> <span class="n">C</span><span class="p">:</span>\<span class="n">FIRE</span><span class="o">&gt;</span><span class="n">fire</span> <span class="o">--</span><span class="n">version</span>
+<span class="n">fire</span><span class="p">,</span> <span class="n">version</span> <span class="mf">1.1.0</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="flame-qgis-plugin">
+<h3>Flame - QGIS plugin<a class="headerlink" href="#flame-qgis-plugin" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Installationsvejledning til Flame afventer beslutninger om deployment
+procedurer.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="datamodel.html" class="btn btn-neutral float-right" title="FIREs Datamodel" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="konfiguration.html" class="btn btn-neutral float-left" title="Konfigurationsfil" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019, Asger Sigurd Skovbo Petersen, Björn Harrtell, Kristian Evers.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

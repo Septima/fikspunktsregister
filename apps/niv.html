@@ -1,0 +1,778 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="dk" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>fire niv &mdash; FIRE 1.1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="fire gama" href="gama.html" />
+    <link rel="prev" title="fire info" href="info.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> FIRE
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../konfiguration.html">Konfigurationsfil</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installationsvejledning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datamodel.html">FIREs Datamodel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../for_udviklere.html">Udviklingsguide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Kommandolinjeprogrammer</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="info.html">fire info</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">fire niv</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#fire-niv-ilaeg-nye-koter">ilæg-nye-koter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fire-niv-ilaeg-nye-punkter">ilæg-nye-punkter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fire-niv-ilaeg-observationer">ilæg-observationer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fire-niv-ilaeg-revision">ilæg-revision</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fire-niv-luk-sag">luk-sag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fire-niv-laes-observationer">læs-observationer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fire-niv-netoversigt">netoversigt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fire-niv-opret-sag">opret-sag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fire-niv-regn">regn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fire-niv-udtraek-revision">udtræk-revision</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gama.html">fire gama</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gama.html#parameterfil">Parameterfil</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api/modules.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workshop/index.html">Workshop</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">FIRE</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">Kommandolinjeprogrammer</a> &raquo;</li>
+        
+      <li>fire niv</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/apps/niv.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="fire-niv">
+<span id="kommandolinjeprogrammer-niv"></span><h1>fire niv<a class="headerlink" href="#fire-niv" title="Permalink to this headline">¶</a></h1>
+<p>Nivellement: Arbejdsflow, beregning og analyse</p>
+<p>Underkommandoerne:</p>
+<blockquote>
+<div><p>opret-sag</p>
+<p>udtræk-revision</p>
+<p>ilæg-revision</p>
+<p>ilæg-nye-punkter</p>
+<p>læs-observationer</p>
+<p>regn</p>
+<p>ilæg-observationer</p>
+<p>ilæg-nye-koter</p>
+<p>luk-sag</p>
+</div></blockquote>
+<p>definerer, i den anførte rækkefølge, nogenlunde arbejdsskridtene i et
+almindeligt opmålingsprojekt.</p>
+<p>OPRET-SAG registrerer sagen (projektet) i databasen og skriver det regneark,
+som bruges til at holde styr på arbejdet.</p>
+<p>UDTRÆK-REVISION udtrækker oversigt over eksisterende punkter i et område,
+til brug for punktrevision (herunder registrering af tabtgåede punkter).</p>
+<p>ILÆG-REVISION lægger opdaterede og nye punktattributter i databasen efter revision.</p>
+<p>ILÆG-NYE-PUNKTER lægger oplysninger om nyoprettede punkter i databasen, og tildeler
+bl.a. landsnumre til punkterne.</p>
+<p>LÆS-OBSERVATIONER læser råfilerne og skriver observationerne til regnearket så de
+er klar til brug i beregninger.</p>
+<p>REGN beregner nye koter til alle punkter, og genererer rapporter og
+visualiseringsmateriale.</p>
+<p>ILÆG-OBSERVATIONER lægger nye observationer i databasen.</p>
+<p>ILÆG-NYE-KOTER lægger nyberegnede koter i databasen.</p>
+<p>LUK-SAG arkiverer det afsluttende regneark og sætter sagens status til inaktiv.</p>
+<p>Eksempel:</p>
+<p>fire niv opret-sag andeby_2020 &quot;Vedligehold Andeby&quot;</p>
+<p>fire niv udtræk-revision andeby_2020 K-99 102-08</p>
+<p>fire niv ilæg-revision andeby_2020</p>
+<p>fire niv ilæg-nye-punkter andeby_2020</p>
+<p>fire niv læs-observationer andeby_2020</p>
+<p>fire niv regn andeby_2020     &lt;- kontrolberegning</p>
+<p>fire niv regn andeby_2020     &lt;- endelig beregning</p>
+<p>fire niv ilæg-observationer andeby_2020</p>
+<p>fire niv ilæg-nye-koter andeby_2020</p>
+<p>fire niv luk-sag andeby_2020</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>fire niv <span class="o">[</span>OPTIONS<span class="o">]</span> COMMAND <span class="o">[</span>ARGS<span class="o">]</span>...
+</pre></div>
+</div>
+<div class="section" id="fire-niv-ilaeg-nye-koter">
+<h2>ilæg-nye-koter<a class="headerlink" href="#fire-niv-ilaeg-nye-koter" title="Permalink to this headline">¶</a></h2>
+<p>Registrer nyberegnede koter i databasen</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>fire niv ilæg-nye-koter <span class="o">[</span>OPTIONS<span class="o">]</span> PROJEKTNAVN
+</pre></div>
+</div>
+<p class="rubric">Options</p>
+<dl class="std option">
+<dt id="cmdoption-fire-niv-ilaeg-nye-koter-db">
+<code class="sig-name descname">--db</code><code class="sig-prename descclassname"> &lt;db&gt;</code><a class="headerlink" href="#cmdoption-fire-niv-ilaeg-nye-koter-db" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vælg en specifik databaseforbindelse - default_connection i fire.ini bruges hvis intet vælges.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Options</dt>
+<dd class="field-odd"><p>prod|test</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-niv-ilaeg-nye-koter-m">
+<span id="cmdoption-fire-niv-ilaeg-nye-koter-monokrom"></span><code class="sig-name descname">-m</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--monokrom</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-niv-ilaeg-nye-koter-m" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vis ikke farver i terminalen</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-niv-ilaeg-nye-koter-debug">
+<code class="sig-name descname">--debug</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-niv-ilaeg-nye-koter-debug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vis debug output</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-niv-ilaeg-nye-koter-help">
+<code class="sig-name descname">--help</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-niv-ilaeg-nye-koter-help" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vis denne hjælp tekst</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-niv-ilaeg-nye-koter-sagsbehandler">
+<code class="sig-name descname">--sagsbehandler</code><code class="sig-prename descclassname"> &lt;sagsbehandler&gt;</code><a class="headerlink" href="#cmdoption-fire-niv-ilaeg-nye-koter-sagsbehandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Angiv andet brugernavn end den aktuelt indloggede</p>
+</dd></dl>
+
+<p class="rubric">Arguments</p>
+<dl class="std option">
+<dt id="cmdoption-fire-niv-ilaeg-nye-koter-arg-PROJEKTNAVN">
+<span id="cmdoption-fire-niv-ilaeg-nye-koter-arg-projektnavn"></span><code class="sig-name descname">PROJEKTNAVN</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-niv-ilaeg-nye-koter-arg-PROJEKTNAVN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Required argument</p>
+</dd></dl>
+
+</div>
+<div class="section" id="fire-niv-ilaeg-nye-punkter">
+<h2>ilæg-nye-punkter<a class="headerlink" href="#fire-niv-ilaeg-nye-punkter" title="Permalink to this headline">¶</a></h2>
+<p>Registrer nyoprettede punkter i databasen</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>fire niv ilæg-nye-punkter <span class="o">[</span>OPTIONS<span class="o">]</span> PROJEKTNAVN
+</pre></div>
+</div>
+<p class="rubric">Options</p>
+<dl class="std option">
+<dt id="cmdoption-fire-niv-ilaeg-nye-punkter-db">
+<code class="sig-name descname">--db</code><code class="sig-prename descclassname"> &lt;db&gt;</code><a class="headerlink" href="#cmdoption-fire-niv-ilaeg-nye-punkter-db" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vælg en specifik databaseforbindelse - default_connection i fire.ini bruges hvis intet vælges.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Options</dt>
+<dd class="field-odd"><p>prod|test</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-niv-ilaeg-nye-punkter-m">
+<span id="cmdoption-fire-niv-ilaeg-nye-punkter-monokrom"></span><code class="sig-name descname">-m</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--monokrom</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-niv-ilaeg-nye-punkter-m" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vis ikke farver i terminalen</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-niv-ilaeg-nye-punkter-debug">
+<code class="sig-name descname">--debug</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-niv-ilaeg-nye-punkter-debug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vis debug output</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-niv-ilaeg-nye-punkter-help">
+<code class="sig-name descname">--help</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-niv-ilaeg-nye-punkter-help" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vis denne hjælp tekst</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-niv-ilaeg-nye-punkter-sagsbehandler">
+<code class="sig-name descname">--sagsbehandler</code><code class="sig-prename descclassname"> &lt;sagsbehandler&gt;</code><a class="headerlink" href="#cmdoption-fire-niv-ilaeg-nye-punkter-sagsbehandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Angiv andet brugernavn end den aktuelt indloggede</p>
+</dd></dl>
+
+<p class="rubric">Arguments</p>
+<dl class="std option">
+<dt id="cmdoption-fire-niv-ilaeg-nye-punkter-arg-PROJEKTNAVN">
+<span id="cmdoption-fire-niv-ilaeg-nye-punkter-arg-projektnavn"></span><code class="sig-name descname">PROJEKTNAVN</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-niv-ilaeg-nye-punkter-arg-PROJEKTNAVN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Required argument</p>
+</dd></dl>
+
+</div>
+<div class="section" id="fire-niv-ilaeg-observationer">
+<h2>ilæg-observationer<a class="headerlink" href="#fire-niv-ilaeg-observationer" title="Permalink to this headline">¶</a></h2>
+<p>Registrer nye observationer i databasen</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>fire niv ilæg-observationer <span class="o">[</span>OPTIONS<span class="o">]</span> PROJEKTNAVN
+</pre></div>
+</div>
+<p class="rubric">Options</p>
+<dl class="std option">
+<dt id="cmdoption-fire-niv-ilaeg-observationer-db">
+<code class="sig-name descname">--db</code><code class="sig-prename descclassname"> &lt;db&gt;</code><a class="headerlink" href="#cmdoption-fire-niv-ilaeg-observationer-db" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vælg en specifik databaseforbindelse - default_connection i fire.ini bruges hvis intet vælges.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Options</dt>
+<dd class="field-odd"><p>prod|test</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-niv-ilaeg-observationer-m">
+<span id="cmdoption-fire-niv-ilaeg-observationer-monokrom"></span><code class="sig-name descname">-m</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--monokrom</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-niv-ilaeg-observationer-m" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vis ikke farver i terminalen</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-niv-ilaeg-observationer-debug">
+<code class="sig-name descname">--debug</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-niv-ilaeg-observationer-debug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vis debug output</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-niv-ilaeg-observationer-help">
+<code class="sig-name descname">--help</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-niv-ilaeg-observationer-help" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vis denne hjælp tekst</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-niv-ilaeg-observationer-sagsbehandler">
+<code class="sig-name descname">--sagsbehandler</code><code class="sig-prename descclassname"> &lt;sagsbehandler&gt;</code><a class="headerlink" href="#cmdoption-fire-niv-ilaeg-observationer-sagsbehandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Angiv andet brugernavn end den aktuelt indloggede</p>
+</dd></dl>
+
+<p class="rubric">Arguments</p>
+<dl class="std option">
+<dt id="cmdoption-fire-niv-ilaeg-observationer-arg-PROJEKTNAVN">
+<span id="cmdoption-fire-niv-ilaeg-observationer-arg-projektnavn"></span><code class="sig-name descname">PROJEKTNAVN</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-niv-ilaeg-observationer-arg-PROJEKTNAVN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Required argument</p>
+</dd></dl>
+
+</div>
+<div class="section" id="fire-niv-ilaeg-revision">
+<h2>ilæg-revision<a class="headerlink" href="#fire-niv-ilaeg-revision" title="Permalink to this headline">¶</a></h2>
+<p>Læg reviderede punktdata i databasen</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>fire niv ilæg-revision <span class="o">[</span>OPTIONS<span class="o">]</span> PROJEKTNAVN <span class="o">[</span>BEMÆRKNING<span class="o">]</span>...
+</pre></div>
+</div>
+<p class="rubric">Options</p>
+<dl class="std option">
+<dt id="cmdoption-fire-niv-ilaeg-revision-db">
+<code class="sig-name descname">--db</code><code class="sig-prename descclassname"> &lt;db&gt;</code><a class="headerlink" href="#cmdoption-fire-niv-ilaeg-revision-db" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vælg en specifik databaseforbindelse - default_connection i fire.ini bruges hvis intet vælges.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Options</dt>
+<dd class="field-odd"><p>prod|test</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-niv-ilaeg-revision-m">
+<span id="cmdoption-fire-niv-ilaeg-revision-monokrom"></span><code class="sig-name descname">-m</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--monokrom</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-niv-ilaeg-revision-m" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vis ikke farver i terminalen</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-niv-ilaeg-revision-debug">
+<code class="sig-name descname">--debug</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-niv-ilaeg-revision-debug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vis debug output</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-niv-ilaeg-revision-help">
+<code class="sig-name descname">--help</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-niv-ilaeg-revision-help" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vis denne hjælp tekst</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-niv-ilaeg-revision-sagsbehandler">
+<code class="sig-name descname">--sagsbehandler</code><code class="sig-prename descclassname"> &lt;sagsbehandler&gt;</code><a class="headerlink" href="#cmdoption-fire-niv-ilaeg-revision-sagsbehandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Angiv andet brugernavn end den aktuelt indloggede</p>
+</dd></dl>
+
+<p class="rubric">Arguments</p>
+<dl class="std option">
+<dt id="cmdoption-fire-niv-ilaeg-revision-arg-PROJEKTNAVN">
+<span id="cmdoption-fire-niv-ilaeg-revision-arg-projektnavn"></span><code class="sig-name descname">PROJEKTNAVN</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-niv-ilaeg-revision-arg-PROJEKTNAVN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Required argument</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-niv-ilaeg-revision-arg-BEMRKNING">
+<span id="cmdoption-fire-niv-ilaeg-revision-arg-bemaerkning"></span><code class="sig-name descname">BEMÆRKNING</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-niv-ilaeg-revision-arg-BEMRKNING" title="Permalink to this definition">¶</a></dt>
+<dd><p>Optional argument(s)</p>
+</dd></dl>
+
+</div>
+<div class="section" id="fire-niv-luk-sag">
+<h2>luk-sag<a class="headerlink" href="#fire-niv-luk-sag" title="Permalink to this headline">¶</a></h2>
+<p>Luk sag i databasen</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>fire niv luk-sag <span class="o">[</span>OPTIONS<span class="o">]</span> PROJEKTNAVN
+</pre></div>
+</div>
+<p class="rubric">Options</p>
+<dl class="std option">
+<dt id="cmdoption-fire-niv-luk-sag-db">
+<code class="sig-name descname">--db</code><code class="sig-prename descclassname"> &lt;db&gt;</code><a class="headerlink" href="#cmdoption-fire-niv-luk-sag-db" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vælg en specifik databaseforbindelse - default_connection i fire.ini bruges hvis intet vælges.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Options</dt>
+<dd class="field-odd"><p>prod|test</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-niv-luk-sag-m">
+<span id="cmdoption-fire-niv-luk-sag-monokrom"></span><code class="sig-name descname">-m</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--monokrom</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-niv-luk-sag-m" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vis ikke farver i terminalen</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-niv-luk-sag-debug">
+<code class="sig-name descname">--debug</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-niv-luk-sag-debug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vis debug output</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-niv-luk-sag-help">
+<code class="sig-name descname">--help</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-niv-luk-sag-help" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vis denne hjælp tekst</p>
+</dd></dl>
+
+<p class="rubric">Arguments</p>
+<dl class="std option">
+<dt id="cmdoption-fire-niv-luk-sag-arg-PROJEKTNAVN">
+<span id="cmdoption-fire-niv-luk-sag-arg-projektnavn"></span><code class="sig-name descname">PROJEKTNAVN</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-niv-luk-sag-arg-PROJEKTNAVN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Required argument</p>
+</dd></dl>
+
+</div>
+<div class="section" id="fire-niv-laes-observationer">
+<h2>læs-observationer<a class="headerlink" href="#fire-niv-laes-observationer" title="Permalink to this headline">¶</a></h2>
+<p>Importer data fra observationsfiler og opbyg punktoversigt</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>fire niv læs-observationer <span class="o">[</span>OPTIONS<span class="o">]</span> PROJEKTNAVN
+</pre></div>
+</div>
+<p class="rubric">Options</p>
+<dl class="std option">
+<dt id="cmdoption-fire-niv-laes-observationer-db">
+<code class="sig-name descname">--db</code><code class="sig-prename descclassname"> &lt;db&gt;</code><a class="headerlink" href="#cmdoption-fire-niv-laes-observationer-db" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vælg en specifik databaseforbindelse - default_connection i fire.ini bruges hvis intet vælges.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Options</dt>
+<dd class="field-odd"><p>prod|test</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-niv-laes-observationer-m">
+<span id="cmdoption-fire-niv-laes-observationer-monokrom"></span><code class="sig-name descname">-m</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--monokrom</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-niv-laes-observationer-m" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vis ikke farver i terminalen</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-niv-laes-observationer-debug">
+<code class="sig-name descname">--debug</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-niv-laes-observationer-debug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vis debug output</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-niv-laes-observationer-help">
+<code class="sig-name descname">--help</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-niv-laes-observationer-help" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vis denne hjælp tekst</p>
+</dd></dl>
+
+<p class="rubric">Arguments</p>
+<dl class="std option">
+<dt id="cmdoption-fire-niv-laes-observationer-arg-PROJEKTNAVN">
+<span id="cmdoption-fire-niv-laes-observationer-arg-projektnavn"></span><code class="sig-name descname">PROJEKTNAVN</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-niv-laes-observationer-arg-PROJEKTNAVN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Required argument</p>
+</dd></dl>
+
+</div>
+<div class="section" id="fire-niv-netoversigt">
+<h2>netoversigt<a class="headerlink" href="#fire-niv-netoversigt" title="Permalink to this headline">¶</a></h2>
+<p>Opbyg netoversigt</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>fire niv netoversigt <span class="o">[</span>OPTIONS<span class="o">]</span> PROJEKTNAVN
+</pre></div>
+</div>
+<p class="rubric">Options</p>
+<dl class="std option">
+<dt id="cmdoption-fire-niv-netoversigt-db">
+<code class="sig-name descname">--db</code><code class="sig-prename descclassname"> &lt;db&gt;</code><a class="headerlink" href="#cmdoption-fire-niv-netoversigt-db" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vælg en specifik databaseforbindelse - default_connection i fire.ini bruges hvis intet vælges.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Options</dt>
+<dd class="field-odd"><p>prod|test</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-niv-netoversigt-m">
+<span id="cmdoption-fire-niv-netoversigt-monokrom"></span><code class="sig-name descname">-m</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--monokrom</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-niv-netoversigt-m" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vis ikke farver i terminalen</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-niv-netoversigt-debug">
+<code class="sig-name descname">--debug</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-niv-netoversigt-debug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vis debug output</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-niv-netoversigt-help">
+<code class="sig-name descname">--help</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-niv-netoversigt-help" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vis denne hjælp tekst</p>
+</dd></dl>
+
+<p class="rubric">Arguments</p>
+<dl class="std option">
+<dt id="cmdoption-fire-niv-netoversigt-arg-PROJEKTNAVN">
+<span id="cmdoption-fire-niv-netoversigt-arg-projektnavn"></span><code class="sig-name descname">PROJEKTNAVN</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-niv-netoversigt-arg-PROJEKTNAVN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Required argument</p>
+</dd></dl>
+
+</div>
+<div class="section" id="fire-niv-opret-sag">
+<h2>opret-sag<a class="headerlink" href="#fire-niv-opret-sag" title="Permalink to this headline">¶</a></h2>
+<p>Registrer ny sag i databasen</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>fire niv opret-sag <span class="o">[</span>OPTIONS<span class="o">]</span> PROJEKTNAVN <span class="o">[</span>BESKRIVELSE<span class="o">]</span>...
+</pre></div>
+</div>
+<p class="rubric">Options</p>
+<dl class="std option">
+<dt id="cmdoption-fire-niv-opret-sag-db">
+<code class="sig-name descname">--db</code><code class="sig-prename descclassname"> &lt;db&gt;</code><a class="headerlink" href="#cmdoption-fire-niv-opret-sag-db" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vælg en specifik databaseforbindelse - default_connection i fire.ini bruges hvis intet vælges.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Options</dt>
+<dd class="field-odd"><p>prod|test</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-niv-opret-sag-m">
+<span id="cmdoption-fire-niv-opret-sag-monokrom"></span><code class="sig-name descname">-m</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--monokrom</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-niv-opret-sag-m" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vis ikke farver i terminalen</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-niv-opret-sag-debug">
+<code class="sig-name descname">--debug</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-niv-opret-sag-debug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vis debug output</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-niv-opret-sag-help">
+<code class="sig-name descname">--help</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-niv-opret-sag-help" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vis denne hjælp tekst</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-niv-opret-sag-sagsbehandler">
+<code class="sig-name descname">--sagsbehandler</code><code class="sig-prename descclassname"> &lt;sagsbehandler&gt;</code><a class="headerlink" href="#cmdoption-fire-niv-opret-sag-sagsbehandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Angiv andet brugernavn end den aktuelt indloggede</p>
+</dd></dl>
+
+<p class="rubric">Arguments</p>
+<dl class="std option">
+<dt id="cmdoption-fire-niv-opret-sag-arg-PROJEKTNAVN">
+<span id="cmdoption-fire-niv-opret-sag-arg-projektnavn"></span><code class="sig-name descname">PROJEKTNAVN</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-niv-opret-sag-arg-PROJEKTNAVN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Required argument</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-niv-opret-sag-arg-BESKRIVELSE">
+<span id="cmdoption-fire-niv-opret-sag-arg-beskrivelse"></span><code class="sig-name descname">BESKRIVELSE</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-niv-opret-sag-arg-BESKRIVELSE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Optional argument(s)</p>
+</dd></dl>
+
+</div>
+<div class="section" id="fire-niv-regn">
+<h2>regn<a class="headerlink" href="#fire-niv-regn" title="Permalink to this headline">¶</a></h2>
+<p>Beregn nye koter.</p>
+<p>Hvis der allerede er foretaget kontrolberegning udfører vi en endelig
+beregning. Valget styres via navnet på seneste oversigtsfaneblad, som
+går fra 'Punktoversigt' (skabt af 'læs_observationer'), via
+'Kontrolberegning' (der skrives ved første kald til denne funktion),
+til 'Endelig beregning' (der skrives ved efterfølgende kald).</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>fire niv regn <span class="o">[</span>OPTIONS<span class="o">]</span> PROJEKTNAVN
+</pre></div>
+</div>
+<p class="rubric">Options</p>
+<dl class="std option">
+<dt id="cmdoption-fire-niv-regn-db">
+<code class="sig-name descname">--db</code><code class="sig-prename descclassname"> &lt;db&gt;</code><a class="headerlink" href="#cmdoption-fire-niv-regn-db" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vælg en specifik databaseforbindelse - default_connection i fire.ini bruges hvis intet vælges.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Options</dt>
+<dd class="field-odd"><p>prod|test</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-niv-regn-m">
+<span id="cmdoption-fire-niv-regn-monokrom"></span><code class="sig-name descname">-m</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--monokrom</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-niv-regn-m" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vis ikke farver i terminalen</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-niv-regn-debug">
+<code class="sig-name descname">--debug</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-niv-regn-debug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vis debug output</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-niv-regn-help">
+<code class="sig-name descname">--help</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-niv-regn-help" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vis denne hjælp tekst</p>
+</dd></dl>
+
+<p class="rubric">Arguments</p>
+<dl class="std option">
+<dt id="cmdoption-fire-niv-regn-arg-PROJEKTNAVN">
+<span id="cmdoption-fire-niv-regn-arg-projektnavn"></span><code class="sig-name descname">PROJEKTNAVN</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-niv-regn-arg-PROJEKTNAVN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Required argument</p>
+</dd></dl>
+
+</div>
+<div class="section" id="fire-niv-udtraek-revision">
+<h2>udtræk-revision<a class="headerlink" href="#fire-niv-udtraek-revision" title="Permalink to this headline">¶</a></h2>
+<p>Gør klar til punktrevision: Udtræk eksisterende information.</p>
+<p>fire niv udtræk-revision projektnavn distrikts-eller-punktnavn(e)</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>fire niv udtræk-revision <span class="o">[</span>OPTIONS<span class="o">]</span> PROJEKTNAVN OPMÅLINGSDISTRIKTER...
+</pre></div>
+</div>
+<p class="rubric">Options</p>
+<dl class="std option">
+<dt id="cmdoption-fire-niv-udtraek-revision-db">
+<code class="sig-name descname">--db</code><code class="sig-prename descclassname"> &lt;db&gt;</code><a class="headerlink" href="#cmdoption-fire-niv-udtraek-revision-db" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vælg en specifik databaseforbindelse - default_connection i fire.ini bruges hvis intet vælges.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Options</dt>
+<dd class="field-odd"><p>prod|test</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-niv-udtraek-revision-m">
+<span id="cmdoption-fire-niv-udtraek-revision-monokrom"></span><code class="sig-name descname">-m</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--monokrom</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-niv-udtraek-revision-m" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vis ikke farver i terminalen</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-niv-udtraek-revision-debug">
+<code class="sig-name descname">--debug</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-niv-udtraek-revision-debug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vis debug output</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-niv-udtraek-revision-help">
+<code class="sig-name descname">--help</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-niv-udtraek-revision-help" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vis denne hjælp tekst</p>
+</dd></dl>
+
+<p class="rubric">Arguments</p>
+<dl class="std option">
+<dt id="cmdoption-fire-niv-udtraek-revision-arg-PROJEKTNAVN">
+<span id="cmdoption-fire-niv-udtraek-revision-arg-projektnavn"></span><code class="sig-name descname">PROJEKTNAVN</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-niv-udtraek-revision-arg-PROJEKTNAVN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Required argument</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-fire-niv-udtraek-revision-arg-OPMALINGSDISTRIKTER">
+<span id="cmdoption-fire-niv-udtraek-revision-arg-opmalingsdistrikter"></span><code class="sig-name descname">OPMÅLINGSDISTRIKTER</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-fire-niv-udtraek-revision-arg-OPMALINGSDISTRIKTER" title="Permalink to this definition">¶</a></dt>
+<dd><p>Required argument(s)</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="gama.html" class="btn btn-neutral float-right" title="fire gama" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="info.html" class="btn btn-neutral float-left" title="fire info" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019, Asger Sigurd Skovbo Petersen, Björn Harrtell, Kristian Evers.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

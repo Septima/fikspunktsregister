@@ -1,0 +1,547 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="dk" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>fire.api package &mdash; FIRE 1.1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="fire.api.gama package" href="fire.api.gama.html" />
+    <link rel="prev" title="fire package" href="fire.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> FIRE
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../konfiguration.html">Konfigurationsfil</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installationsvejledning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datamodel.html">FIREs Datamodel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../for_udviklere.html">Udviklingsguide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apps/index.html">Kommandolinjeprogrammer</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">API</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="fire.html">fire package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="fire.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">fire.api package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fire.cli.html">fire.cli package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="fire.html#module-fire">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../workshop/index.html">Workshop</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">FIRE</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">API</a> &raquo;</li>
+        
+          <li><a href="fire.html">fire package</a> &raquo;</li>
+        
+      <li>fire.api package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/api/fire.api.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="fire-api-package">
+<h1>fire.api package<a class="headerlink" href="#fire-api-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="fire.api.gama.html">fire.api.gama package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fire.api.gama.html#module-fire.api.gama.networkdoc">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fire.api.gama.html#module-fire.api.gama">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fire.api.model.html">fire.api.model package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fire.api.model.html#module-fire.api.model.columntypes">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fire.api.model.html#module-fire.api.model">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="module-fire.api.firedb">
+<span id="submodules"></span><h2>Submodules<a class="headerlink" href="#module-fire.api.firedb" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="fire.api.firedb.FireDb">
+<em class="property">class </em><code class="sig-prename descclassname">fire.api.firedb.</code><code class="sig-name descname">FireDb</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">db</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connectionstring</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">debug</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.firedb.FireDb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt id="fire.api.firedb.FireDb.basedir_materiale">
+<em class="property">property </em><code class="sig-name descname">basedir_materiale</code><a class="headerlink" href="#fire.api.firedb.FireDb.basedir_materiale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returner absolut del af sti til sagsmateriale.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fire.api.firedb.FireDb.basedir_skitser">
+<em class="property">property </em><code class="sig-name descname">basedir_skitser</code><a class="headerlink" href="#fire.api.firedb.FireDb.basedir_skitser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returner absolut del af sti til skitser.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fire.api.firedb.FireDb.fejlmeld_koordinat">
+<code class="sig-name descname">fejlmeld_koordinat</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sagsevent</span><span class="p">:</span> <span class="n"><a class="reference internal" href="fire.api.model.html#fire.api.model.sagstyper.Sagsevent" title="fire.api.model.sagstyper.Sagsevent">fire.api.model.sagstyper.Sagsevent</a></span></em>, <em class="sig-param"><span class="n">koordinat</span><span class="p">:</span> <span class="n"><a class="reference internal" href="fire.api.model.html#fire.api.model.punkttyper.Koordinat" title="fire.api.model.punkttyper.Koordinat">fire.api.model.punkttyper.Koordinat</a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.firedb.FireDb.fejlmeld_koordinat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fejlmeld en allerede eksisterende koordinat.</p>
+<p>Hvis koordinaten er den eneste af sin slags på det tilknyttede punkt fejlmeldes
+og afregistreres den. Hvis koordinaten indgår i en tidsserie sker en af to ting:</p>
+<ol class="arabic simple">
+<li><p>Hvis koordinaten forekommer midt i en tidsserie fejlmeldes den uden videre.</p></li>
+<li><p>Hvis koordinaten er den seneste i tidsserien fejlmeldes den, den foregående
+koordinat fejlmeldes og en ny koordinat indsættes med den foregåendes værdier.
+Denne fremgangsmåde sikrer at der er en aktuel og gyldig koordinat, samt at
+den samme koordinat ikke fremtræder to gange i en tidsserie.</p></li>
+</ol>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fire.api.firedb.FireDb.hent_alle_punkter">
+<code class="sig-name descname">hent_alle_punkter</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; List<span class="p">[</span><a class="reference internal" href="fire.api.model.html#fire.api.model.punkttyper.Punkt" title="fire.api.model.punkttyper.Punkt">fire.api.model.punkttyper.Punkt</a><span class="p">]</span><a class="headerlink" href="#fire.api.firedb.FireDb.hent_alle_punkter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="fire.api.firedb.FireDb.hent_alle_sager">
+<code class="sig-name descname">hent_alle_sager</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">aktive</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span> &#x2192; List<span class="p">[</span><a class="reference internal" href="fire.api.model.html#fire.api.model.sagstyper.Sag" title="fire.api.model.sagstyper.Sag">fire.api.model.sagstyper.Sag</a><span class="p">]</span><a class="headerlink" href="#fire.api.firedb.FireDb.hent_alle_sager" title="Permalink to this definition">¶</a></dt>
+<dd><p>Henter alle sager fra databasen.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fire.api.firedb.FireDb.hent_geometri_objekt">
+<code class="sig-name descname">hent_geometri_objekt</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">punktid</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="fire.api.model.html#fire.api.model.punkttyper.GeometriObjekt" title="fire.api.model.punkttyper.GeometriObjekt">fire.api.model.punkttyper.GeometriObjekt</a><a class="headerlink" href="#fire.api.firedb.FireDb.hent_geometri_objekt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="fire.api.firedb.FireDb.hent_observationer">
+<code class="sig-name descname">hent_observationer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ids</span><span class="p">:</span> <span class="n">List<span class="p">[</span>str<span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; List<span class="p">[</span><a class="reference internal" href="fire.api.model.html#fire.api.model.punkttyper.Observation" title="fire.api.model.punkttyper.Observation">fire.api.model.punkttyper.Observation</a><span class="p">]</span><a class="headerlink" href="#fire.api.firedb.FireDb.hent_observationer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returnerer alle observationer fra databasen hvis id'er er indeholdt i listen
+<cite>ids</cite>. Hvis <cite>ids</cite> indeholder ID'er som ikke findes i databasen gives der
+<em>ikke</em> en fejlmelding.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fire.api.firedb.FireDb.hent_observationer_naer_geometri">
+<code class="sig-name descname">hent_observationer_naer_geometri</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">geometri</span><span class="p">:</span> <span class="n"><a class="reference internal" href="fire.api.model.html#fire.api.model.geometry.Geometry" title="fire.api.model.geometry.Geometry">fire.api.model.geometry.Geometry</a></span></em>, <em class="sig-param"><span class="n">afstand</span><span class="p">:</span> <span class="n">float</span></em>, <em class="sig-param"><span class="n">tidfra</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>datetime.datetime<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tidtil</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>datetime.datetime<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; List<span class="p">[</span><a class="reference internal" href="fire.api.model.html#fire.api.model.punkttyper.Observation" title="fire.api.model.punkttyper.Observation">fire.api.model.punkttyper.Observation</a><span class="p">]</span><a class="headerlink" href="#fire.api.firedb.FireDb.hent_observationer_naer_geometri" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>geometri</strong> -- Enten en WKT-streng eller en instans af Geometry, der bruges til
+udvælge alle geometriobjekter der befinder sig inden for en given
+afstand af denne geometri.</p></li>
+<li><p><strong>afstand</strong> -- Bufferafstand omkring geometri.</p></li>
+<li><p><strong>tidfra</strong> -- </p></li>
+<li><p><strong>tidtil</strong> -- asd</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>En liste af alle de Observation'er der matcher søgekriterierne.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>List[<a class="reference internal" href="fire.api.model.html#fire.api.model.punkttyper.Observation" title="fire.api.model.punkttyper.Observation">Observation</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fire.api.firedb.FireDb.hent_observationer_naer_opstillingspunkt">
+<code class="sig-name descname">hent_observationer_naer_opstillingspunkt</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">punkt</span><span class="p">:</span> <span class="n"><a class="reference internal" href="fire.api.model.html#fire.api.model.punkttyper.Punkt" title="fire.api.model.punkttyper.Punkt">fire.api.model.punkttyper.Punkt</a></span></em>, <em class="sig-param"><span class="n">afstand</span><span class="p">:</span> <span class="n">float</span></em>, <em class="sig-param"><span class="n">tidfra</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>datetime.datetime<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tidtil</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>datetime.datetime<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; List<span class="p">[</span><a class="reference internal" href="fire.api.model.html#fire.api.model.punkttyper.Observation" title="fire.api.model.punkttyper.Observation">fire.api.model.punkttyper.Observation</a><span class="p">]</span><a class="headerlink" href="#fire.api.firedb.FireDb.hent_observationer_naer_opstillingspunkt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="fire.api.firedb.FireDb.hent_observationstype">
+<code class="sig-name descname">hent_observationstype</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="fire.api.model.html#fire.api.model.punkttyper.ObservationsType" title="fire.api.model.punkttyper.ObservationsType">fire.api.model.punkttyper.ObservationsType</a><a class="headerlink" href="#fire.api.firedb.FireDb.hent_observationstype" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hent en ObservationsType ud fra dens navn.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>observationstypeid</strong> (<em>str</em>) -- Navn på observationstypen.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Den første ObservationsType der matcher det angivne navn. None hvis
+ingen observationstyper matcher det søgte navn.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="fire.api.model.html#fire.api.model.punkttyper.ObservationsType" title="fire.api.model.punkttyper.ObservationsType">ObservationsType</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fire.api.firedb.FireDb.hent_observationstyper">
+<code class="sig-name descname">hent_observationstyper</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; List<span class="p">[</span><a class="reference internal" href="fire.api.model.html#fire.api.model.punkttyper.ObservationsType" title="fire.api.model.punkttyper.ObservationsType">fire.api.model.punkttyper.ObservationsType</a><span class="p">]</span><a class="headerlink" href="#fire.api.firedb.FireDb.hent_observationstyper" title="Permalink to this definition">¶</a></dt>
+<dd><p>Henter alle ObservationsTyper.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fire.api.firedb.FireDb.hent_punkt">
+<code class="sig-name descname">hent_punkt</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ident</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="fire.api.model.html#fire.api.model.punkttyper.Punkt" title="fire.api.model.punkttyper.Punkt">fire.api.model.punkttyper.Punkt</a><a class="headerlink" href="#fire.api.firedb.FireDb.hent_punkt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returnerer det første punkt der matcher 'ident'</p>
+<p>Hvis intet punkt findes udsendes en NoResultFound exception.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fire.api.firedb.FireDb.hent_punkt_liste">
+<code class="sig-name descname">hent_punkt_liste</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">identer</span><span class="p">:</span> <span class="n">List<span class="p">[</span>str<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">ignorer_ukendte</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em><span class="sig-paren">)</span> &#x2192; List<span class="p">[</span><a class="reference internal" href="fire.api.model.html#fire.api.model.punkttyper.Punkt" title="fire.api.model.punkttyper.Punkt">fire.api.model.punkttyper.Punkt</a><span class="p">]</span><a class="headerlink" href="#fire.api.firedb.FireDb.hent_punkt_liste" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returnerer en liste af punkter der matcher identerne i listen <cite>identer</cite>.</p>
+<p>Hvis <cite>ignorer_ukendte</cite> sættes til False udløses en ValueError exception
+hvis et ident ikke kan matches med et Punkt i databasen.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fire.api.firedb.FireDb.hent_punkter">
+<code class="sig-name descname">hent_punkter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ident</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; List<span class="p">[</span><a class="reference internal" href="fire.api.model.html#fire.api.model.punkttyper.Punkt" title="fire.api.model.punkttyper.Punkt">fire.api.model.punkttyper.Punkt</a><span class="p">]</span><a class="headerlink" href="#fire.api.firedb.FireDb.hent_punkter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returnerer alle punkter der matcher 'ident'</p>
+<p>Hvis intet punkt findes udsendes en NoResultFound exception.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fire.api.firedb.FireDb.hent_punktinformationtype">
+<code class="sig-name descname">hent_punktinformationtype</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">infotype</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="fire.api.model.html#fire.api.model.punkttyper.PunktInformationType" title="fire.api.model.punkttyper.PunktInformationType">fire.api.model.punkttyper.PunktInformationType</a><a class="headerlink" href="#fire.api.firedb.FireDb.hent_punktinformationtype" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="fire.api.firedb.FireDb.hent_punktinformationtyper">
+<code class="sig-name descname">hent_punktinformationtyper</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">namespace</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.firedb.FireDb.hent_punktinformationtyper" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="fire.api.firedb.FireDb.hent_sag">
+<code class="sig-name descname">hent_sag</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sagsid</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="fire.api.model.html#fire.api.model.sagstyper.Sag" title="fire.api.model.sagstyper.Sag">fire.api.model.sagstyper.Sag</a><a class="headerlink" href="#fire.api.firedb.FireDb.hent_sag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hent en sag ud fra dens sagsid.</p>
+<p>Sagsid'er behøver ikke være fuldstændige, funktionen forsøger at matche
+partielle sagsider i samme stil som git håndterer commit hashes. I
+tilfælde af at søgningen med et partielt sagsid resulterer i flere
+matches udsendes en sqlalchemy.orm.exc.MultipleResultsFound exception.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fire.api.firedb.FireDb.hent_srid">
+<code class="sig-name descname">hent_srid</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sridid</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="fire.api.model.html#fire.api.model.punkttyper.Srid" title="fire.api.model.punkttyper.Srid">fire.api.model.punkttyper.Srid</a><a class="headerlink" href="#fire.api.firedb.FireDb.hent_srid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hent et Srid objekt ud fra dets id.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sridid</strong> (<em>str</em>) -- SRID streng, fx &quot;EPSG:25832&quot;.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Srid objekt med det angivne ID. None hvis det efterspurgte
+SRID ikke findes i databasen.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="fire.api.model.html#fire.api.model.punkttyper.Srid" title="fire.api.model.punkttyper.Srid">Srid</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fire.api.firedb.FireDb.hent_srider">
+<code class="sig-name descname">hent_srider</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">namespace</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; List<span class="p">[</span><a class="reference internal" href="fire.api.model.html#fire.api.model.punkttyper.Srid" title="fire.api.model.punkttyper.Srid">fire.api.model.punkttyper.Srid</a><span class="p">]</span><a class="headerlink" href="#fire.api.firedb.FireDb.hent_srider" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returnerer samtlige Srid objekter i databasen, evt. filtreret på namespace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>namespace</strong> (<em>str - valgfri</em>) -- Return only Srids with the specified namespace. For instance &quot;EPSG&quot;. If not
+specified all objects are returned.
+Returne kun SRID-objekter fra det valgte namespace, fx &quot;EPSG&quot;. Hvis ikke
+angivet returneres samtlige SRID objekter fra databasen.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>List[<a class="reference internal" href="fire.api.model.html#fire.api.model.punkttyper.Srid" title="fire.api.model.punkttyper.Srid">Srid</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fire.api.firedb.FireDb.indset_observationstype">
+<code class="sig-name descname">indset_observationstype</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">observationstype</span><span class="p">:</span> <span class="n"><a class="reference internal" href="fire.api.model.html#fire.api.model.punkttyper.ObservationsType" title="fire.api.model.punkttyper.ObservationsType">fire.api.model.punkttyper.ObservationsType</a></span></em>, <em class="sig-param"><span class="n">commit</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.firedb.FireDb.indset_observationstype" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="fire.api.firedb.FireDb.indset_punktinformationtype">
+<code class="sig-name descname">indset_punktinformationtype</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">punktinfotype</span><span class="p">:</span> <span class="n"><a class="reference internal" href="fire.api.model.html#fire.api.model.punkttyper.PunktInformationType" title="fire.api.model.punkttyper.PunktInformationType">fire.api.model.punkttyper.PunktInformationType</a></span></em>, <em class="sig-param"><span class="n">commit</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.firedb.FireDb.indset_punktinformationtype" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="fire.api.firedb.FireDb.indset_sag">
+<code class="sig-name descname">indset_sag</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sag</span><span class="p">:</span> <span class="n"><a class="reference internal" href="fire.api.model.html#fire.api.model.sagstyper.Sag" title="fire.api.model.sagstyper.Sag">fire.api.model.sagstyper.Sag</a></span></em>, <em class="sig-param"><span class="n">commit</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.firedb.FireDb.indset_sag" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="fire.api.firedb.FireDb.indset_sagsevent">
+<code class="sig-name descname">indset_sagsevent</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sagsevent</span><span class="p">:</span> <span class="n"><a class="reference internal" href="fire.api.model.html#fire.api.model.sagstyper.Sagsevent" title="fire.api.model.sagstyper.Sagsevent">fire.api.model.sagstyper.Sagsevent</a></span></em>, <em class="sig-param"><span class="n">commit</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.firedb.FireDb.indset_sagsevent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="fire.api.firedb.FireDb.indset_srid">
+<code class="sig-name descname">indset_srid</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">srid</span><span class="p">:</span> <span class="n"><a class="reference internal" href="fire.api.model.html#fire.api.model.punkttyper.Srid" title="fire.api.model.punkttyper.Srid">fire.api.model.punkttyper.Srid</a></span></em>, <em class="sig-param"><span class="n">commit</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.firedb.FireDb.indset_srid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="fire.api.firedb.FireDb.luk_beregning">
+<code class="sig-name descname">luk_beregning</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">beregning</span><span class="p">:</span> <span class="n"><a class="reference internal" href="fire.api.model.html#fire.api.model.punkttyper.Beregning" title="fire.api.model.punkttyper.Beregning">fire.api.model.punkttyper.Beregning</a></span></em>, <em class="sig-param"><span class="n">sagsevent</span><span class="p">:</span> <span class="n"><a class="reference internal" href="fire.api.model.html#fire.api.model.sagstyper.Sagsevent" title="fire.api.model.sagstyper.Sagsevent">fire.api.model.sagstyper.Sagsevent</a></span></em>, <em class="sig-param"><span class="n">commit</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.firedb.FireDb.luk_beregning" title="Permalink to this definition">¶</a></dt>
+<dd><p>Luk en beregning.</p>
+<p>Lukker alle koordinater der er tilknyttet beregningen.
+Hvis ikke allerede sat, ændres sagseventtypen til EventType.KOORDINAT_NEDLAGT.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fire.api.firedb.FireDb.luk_koordinat">
+<code class="sig-name descname">luk_koordinat</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">koordinat</span><span class="p">:</span> <span class="n"><a class="reference internal" href="fire.api.model.html#fire.api.model.punkttyper.Koordinat" title="fire.api.model.punkttyper.Koordinat">fire.api.model.punkttyper.Koordinat</a></span></em>, <em class="sig-param"><span class="n">sagsevent</span><span class="p">:</span> <span class="n"><a class="reference internal" href="fire.api.model.html#fire.api.model.sagstyper.Sagsevent" title="fire.api.model.sagstyper.Sagsevent">fire.api.model.sagstyper.Sagsevent</a></span></em>, <em class="sig-param"><span class="n">commit</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.firedb.FireDb.luk_koordinat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Luk en koordinat.</p>
+<p>Hvis ikke allerede sat, ændres sagseventtypen til EventType.KOORDINAT_NEDLAGT.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fire.api.firedb.FireDb.luk_observation">
+<code class="sig-name descname">luk_observation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">observation</span><span class="p">:</span> <span class="n"><a class="reference internal" href="fire.api.model.html#fire.api.model.punkttyper.Observation" title="fire.api.model.punkttyper.Observation">fire.api.model.punkttyper.Observation</a></span></em>, <em class="sig-param"><span class="n">sagsevent</span><span class="p">:</span> <span class="n"><a class="reference internal" href="fire.api.model.html#fire.api.model.sagstyper.Sagsevent" title="fire.api.model.sagstyper.Sagsevent">fire.api.model.sagstyper.Sagsevent</a></span></em>, <em class="sig-param"><span class="n">commit</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.firedb.FireDb.luk_observation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Luk en observation.</p>
+<p>Hvis ikke allerede sat, ændres sagseventtypen til EventType.OBSERVATION_NEDLAGT.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fire.api.firedb.FireDb.luk_punkt">
+<code class="sig-name descname">luk_punkt</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">punkt</span><span class="p">:</span> <span class="n"><a class="reference internal" href="fire.api.model.html#fire.api.model.punkttyper.Punkt" title="fire.api.model.punkttyper.Punkt">fire.api.model.punkttyper.Punkt</a></span></em>, <em class="sig-param"><span class="n">sagsevent</span><span class="p">:</span> <span class="n"><a class="reference internal" href="fire.api.model.html#fire.api.model.sagstyper.Sagsevent" title="fire.api.model.sagstyper.Sagsevent">fire.api.model.sagstyper.Sagsevent</a></span></em>, <em class="sig-param"><span class="n">commit</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.firedb.FireDb.luk_punkt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Luk et punkt.</p>
+<p>Lukker udover selve punktet også tilhørende geometriobjekt,
+koordinater og punktinformationer. Alle lukkede objekter tilknyttes
+samme sagsevent af typen EventType.PUNKT_NEDLAGT.</p>
+<p>Dette er den ultimative udrensning. BRUG MED OMTANKE!</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fire.api.firedb.FireDb.luk_punktinfo">
+<code class="sig-name descname">luk_punktinfo</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">punktinfo</span><span class="p">:</span> <span class="n"><a class="reference internal" href="fire.api.model.html#fire.api.model.punkttyper.PunktInformation" title="fire.api.model.punkttyper.PunktInformation">fire.api.model.punkttyper.PunktInformation</a></span></em>, <em class="sig-param"><span class="n">sagsevent</span><span class="p">:</span> <span class="n"><a class="reference internal" href="fire.api.model.html#fire.api.model.sagstyper.Sagsevent" title="fire.api.model.sagstyper.Sagsevent">fire.api.model.sagstyper.Sagsevent</a></span></em>, <em class="sig-param"><span class="n">commit</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.firedb.FireDb.luk_punktinfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Luk en punktinformation.</p>
+<p>Hvis ikke allerede sat, ændres sagseventtypen til EventType.PUNKTINFO_FJERNET.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fire.api.firedb.FireDb.luk_sag">
+<code class="sig-name descname">luk_sag</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sag</span><span class="p">:</span> <span class="n"><a class="reference internal" href="fire.api.model.html#fire.api.model.sagstyper.Sag" title="fire.api.model.sagstyper.Sag">fire.api.model.sagstyper.Sag</a></span></em>, <em class="sig-param"><span class="n">commit</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.firedb.FireDb.luk_sag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sætter en sags status til inaktiv</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fire.api.firedb.FireDb.soeg_geometriobjekt">
+<code class="sig-name descname">soeg_geometriobjekt</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">bbox</span></em><span class="sig-paren">)</span> &#x2192; List<span class="p">[</span><a class="reference internal" href="fire.api.model.html#fire.api.model.punkttyper.GeometriObjekt" title="fire.api.model.punkttyper.GeometriObjekt">fire.api.model.punkttyper.GeometriObjekt</a><span class="p">]</span><a class="headerlink" href="#fire.api.firedb.FireDb.soeg_geometriobjekt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="fire.api.firedb.FireDb.soeg_punkter">
+<code class="sig-name descname">soeg_punkter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ident</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">antal</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; List<span class="p">[</span><a class="reference internal" href="fire.api.model.html#fire.api.model.punkttyper.Punkt" title="fire.api.model.punkttyper.Punkt">fire.api.model.punkttyper.Punkt</a><span class="p">]</span><a class="headerlink" href="#fire.api.firedb.FireDb.soeg_punkter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returnerer alle punkter der 'like'-matcher 'ident'</p>
+<p>Hvis intet punkt findes udsendes en NoResultFound exception.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fire.api.firedb.FireDb.tilknyt_gi_nummer">
+<code class="sig-name descname">tilknyt_gi_nummer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">punkt</span><span class="p">:</span> <span class="n"><a class="reference internal" href="fire.api.model.html#fire.api.model.punkttyper.Punkt" title="fire.api.model.punkttyper.Punkt">fire.api.model.punkttyper.Punkt</a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="fire.api.model.html#fire.api.model.punkttyper.PunktInformation" title="fire.api.model.punkttyper.PunktInformation">fire.api.model.punkttyper.PunktInformation</a><a class="headerlink" href="#fire.api.firedb.FireDb.tilknyt_gi_nummer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tilknyt et G.I. ident til et punkt.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fire.api.firedb.FireDb.tilknyt_landsnumre">
+<code class="sig-name descname">tilknyt_landsnumre</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">punkter</span><span class="p">:</span> <span class="n">List<span class="p">[</span><a class="reference internal" href="fire.api.model.html#fire.api.model.punkttyper.Punkt" title="fire.api.model.punkttyper.Punkt">fire.api.model.punkttyper.Punkt</a><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">fikspunktstyper</span><span class="p">:</span> <span class="n">List<span class="p">[</span><a class="reference internal" href="fire.api.model.html#fire.api.model.punkttyper.FikspunktsType" title="fire.api.model.punkttyper.FikspunktsType">fire.api.model.punkttyper.FikspunktsType</a><span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; List<span class="p">[</span><a class="reference internal" href="fire.api.model.html#fire.api.model.punkttyper.PunktInformation" title="fire.api.model.punkttyper.PunktInformation">fire.api.model.punkttyper.PunktInformation</a><span class="p">]</span><a class="headerlink" href="#fire.api.firedb.FireDb.tilknyt_landsnumre" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tilknytter et landsnummer til punktet hvis der ikke findes et i forvejen.</p>
+<p>Returnerer en liste med IDENT:landsnr PunktInformation'er for alle de fikspunkter i
+<cite>punkter</cite> som ikke i forvejen har et landsnummer. Hvis alle fikspunkter i <cite>punkter</cite>
+allerede har et landsnummer returneres en tom liste.</p>
+<p>Kun punkter i Danmark kan tildeles et landsnummer. Det forudsættes at punktet
+har et tilhørende geometriobjekt og er indlæst i databasen i forvejen.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-fire.api">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-fire.api" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="fire.api.gama.html" class="btn btn-neutral float-right" title="fire.api.gama package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="fire.html" class="btn btn-neutral float-left" title="fire package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019, Asger Sigurd Skovbo Petersen, Björn Harrtell, Kristian Evers.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

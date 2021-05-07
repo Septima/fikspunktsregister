@@ -1,0 +1,1772 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="dk" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>fire.api.model package &mdash; FIRE 1.1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="fire.cli package" href="fire.cli.html" />
+    <link rel="prev" title="fire.api.gama package" href="fire.api.gama.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> FIRE
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../konfiguration.html">Konfigurationsfil</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installationsvejledning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datamodel.html">FIREs Datamodel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../for_udviklere.html">Udviklingsguide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apps/index.html">Kommandolinjeprogrammer</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">API</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="fire.html">fire package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="fire.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="fire.api.html">fire.api package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fire.cli.html">fire.cli package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="fire.html#module-fire">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../workshop/index.html">Workshop</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">FIRE</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">API</a> &raquo;</li>
+        
+          <li><a href="fire.html">fire package</a> &raquo;</li>
+        
+          <li><a href="fire.api.html">fire.api package</a> &raquo;</li>
+        
+      <li>fire.api.model package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/api/fire.api.model.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="fire-api-model-package">
+<h1>fire.api.model package<a class="headerlink" href="#fire-api-model-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-fire.api.model.columntypes">
+<span id="submodules"></span><h2>Submodules<a class="headerlink" href="#module-fire.api.model.columntypes" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="fire.api.model.columntypes.Curve">
+<em class="property">class </em><code class="sig-prename descclassname">fire.api.model.columntypes.</code><code class="sig-name descname">Curve</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dimension</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">srid</span><span class="o">=</span><span class="default_value">- 1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.model.columntypes.Curve" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#fire.api.model.columntypes.Geometry" title="fire.api.model.columntypes.Geometry"><code class="xref py py-class docutils literal notranslate"><span class="pre">fire.api.model.columntypes.Geometry</span></code></a></p>
+<dl class="py attribute">
+<dt id="fire.api.model.columntypes.Curve.name">
+<code class="sig-name descname">name</code><em class="property"> = 'CURVE'</em><a class="headerlink" href="#fire.api.model.columntypes.Curve.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="fire.api.model.columntypes.Geometry">
+<em class="property">class </em><code class="sig-prename descclassname">fire.api.model.columntypes.</code><code class="sig-name descname">Geometry</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dimension</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">srid</span><span class="o">=</span><span class="default_value">- 1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.model.columntypes.Geometry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.type_api.UserDefinedType</span></code></p>
+<p>Oracle geometri Column type.</p>
+<dl class="py method">
+<dt id="fire.api.model.columntypes.Geometry.adapt">
+<code class="sig-name descname">adapt</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">impltype</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.model.columntypes.Geometry.adapt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Produce an &quot;adapted&quot; form of this type, given an &quot;impl&quot; class
+to work with.</p>
+<p>This method is used internally to associate generic
+types with &quot;implementation&quot; types that are specific to a particular
+dialect.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fire.api.model.columntypes.Geometry.bind_expression">
+<code class="sig-name descname">bind_expression</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">bindvalue</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.model.columntypes.Geometry.bind_expression" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="fire.api.model.columntypes.Geometry.bind_processor">
+<code class="sig-name descname">bind_processor</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dialect</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.model.columntypes.Geometry.bind_processor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a conversion function for processing bind values.</p>
+<p>Returns a callable which will receive a bind parameter value
+as the sole positional argument and will return a value to
+send to the DB-API.</p>
+<p>If processing is not necessary, the method should return <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>dialect</strong> -- Dialect instance in use.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fire.api.model.columntypes.Geometry.column_expression">
+<code class="sig-name descname">column_expression</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">col</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.model.columntypes.Geometry.column_expression" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="fire.api.model.columntypes.Geometry.get_col_spec">
+<code class="sig-name descname">get_col_spec</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.model.columntypes.Geometry.get_col_spec" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.columntypes.Geometry.name">
+<code class="sig-name descname">name</code><em class="property"> = 'GEOMETRY'</em><a class="headerlink" href="#fire.api.model.columntypes.Geometry.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="fire.api.model.columntypes.Geometry.result_processor">
+<code class="sig-name descname">result_processor</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dialect</span></em>, <em class="sig-param"><span class="n">coltype</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.model.columntypes.Geometry.result_processor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a conversion function for processing result row values.</p>
+<p>Returns a callable which will receive a result row column
+value as the sole positional argument and will return a value
+to return to the user.</p>
+<p>If processing is not necessary, the method should return <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dialect</strong> -- Dialect instance in use.</p></li>
+<li><p><strong>coltype</strong> -- DBAPI coltype argument received in cursor.description.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="fire.api.model.columntypes.LineString">
+<em class="property">class </em><code class="sig-prename descclassname">fire.api.model.columntypes.</code><code class="sig-name descname">LineString</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dimension</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">srid</span><span class="o">=</span><span class="default_value">- 1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.model.columntypes.LineString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#fire.api.model.columntypes.Curve" title="fire.api.model.columntypes.Curve"><code class="xref py py-class docutils literal notranslate"><span class="pre">fire.api.model.columntypes.Curve</span></code></a></p>
+<dl class="py attribute">
+<dt id="fire.api.model.columntypes.LineString.name">
+<code class="sig-name descname">name</code><em class="property"> = 'LINESTRING'</em><a class="headerlink" href="#fire.api.model.columntypes.LineString.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="fire.api.model.columntypes.Point">
+<em class="property">class </em><code class="sig-prename descclassname">fire.api.model.columntypes.</code><code class="sig-name descname">Point</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dimension</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">srid</span><span class="o">=</span><span class="default_value">- 1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.model.columntypes.Point" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#fire.api.model.columntypes.Geometry" title="fire.api.model.columntypes.Geometry"><code class="xref py py-class docutils literal notranslate"><span class="pre">fire.api.model.columntypes.Geometry</span></code></a></p>
+<dl class="py attribute">
+<dt id="fire.api.model.columntypes.Point.name">
+<code class="sig-name descname">name</code><em class="property"> = 'POINT'</em><a class="headerlink" href="#fire.api.model.columntypes.Point.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-fire.api.model.geometry"></span><dl class="py class">
+<dt id="fire.api.model.geometry.Bbox">
+<em class="property">class </em><code class="sig-prename descclassname">fire.api.model.geometry.</code><code class="sig-name descname">Bbox</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">bounds</span></em>, <em class="sig-param"><span class="n">srid</span><span class="o">=</span><span class="default_value">4326</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.model.geometry.Bbox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#fire.api.model.geometry.Geometry" title="fire.api.model.geometry.Geometry"><code class="xref py py-class docutils literal notranslate"><span class="pre">fire.api.model.geometry.Geometry</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="fire.api.model.geometry.Geometry">
+<em class="property">class </em><code class="sig-prename descclassname">fire.api.model.geometry.</code><code class="sig-name descname">Geometry</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">geometry</span></em>, <em class="sig-param"><span class="n">srid</span><span class="o">=</span><span class="default_value">4326</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.model.geometry.Geometry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.functions.Function</span></code></p>
+<p>Repræsenterer en geometri værdi.</p>
+<dl class="py method">
+<dt id="fire.api.model.geometry.Geometry.wkt">
+<em class="property">property </em><code class="sig-name descname">wkt</code><a class="headerlink" href="#fire.api.model.geometry.Geometry.wkt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="fire.api.model.geometry.Point">
+<em class="property">class </em><code class="sig-prename descclassname">fire.api.model.geometry.</code><code class="sig-name descname">Point</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">p</span></em>, <em class="sig-param"><span class="n">srid</span><span class="o">=</span><span class="default_value">4326</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.model.geometry.Point" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#fire.api.model.geometry.Geometry" title="fire.api.model.geometry.Geometry"><code class="xref py py-class docutils literal notranslate"><span class="pre">fire.api.model.geometry.Geometry</span></code></a></p>
+</dd></dl>
+
+<span class="target" id="module-fire.api.model.punkttyper"></span><dl class="py class">
+<dt id="fire.api.model.punkttyper.Artskode">
+<em class="property">class </em><code class="sig-prename descclassname">fire.api.model.punkttyper.</code><code class="sig-name descname">Artskode</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.model.punkttyper.Artskode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>Uddybende beskrivelser fra REFGEO:</p>
+<p>artskode = 1 control point in fundamental network, first order.
+artskode = 2 control point in superior plane network.
+artskode = 2 control point in superior height network.
+artskode = 3 control point in network of high quality.
+artskode = 4 control point in network of lower or unknown quality.
+artskode = 5 coordinate computed on just a few measurements.
+artskode = 6 coordinate transformed from local or an not valid coordinate system.
+artskode = 7 coordinate computed on an not valid coordinate system, or system of unknown origin.
+artskode = 8 coordinate computed on few measurements, and on an not valid coordinate system.
+artskode = 9 location coordinate or location height.</p>
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Artskode.BESTEMT_FRA_FAA_OBSERVATIONER">
+<code class="sig-name descname">BESTEMT_FRA_FAA_OBSERVATIONER</code><em class="property"> = 5</em><a class="headerlink" href="#fire.api.model.punkttyper.Artskode.BESTEMT_FRA_FAA_OBSERVATIONER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Artskode.FAA_OBS_OG_UKENDT_KOORDINATSYSTEM">
+<code class="sig-name descname">FAA_OBS_OG_UKENDT_KOORDINATSYSTEM</code><em class="property"> = 8</em><a class="headerlink" href="#fire.api.model.punkttyper.Artskode.FAA_OBS_OG_UKENDT_KOORDINATSYSTEM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Artskode.FUNDAMENTAL_PUNKT">
+<code class="sig-name descname">FUNDAMENTAL_PUNKT</code><em class="property"> = 1</em><a class="headerlink" href="#fire.api.model.punkttyper.Artskode.FUNDAMENTAL_PUNKT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Artskode.LOKATIONSKOORDINAT">
+<code class="sig-name descname">LOKATIONSKOORDINAT</code><em class="property"> = 9</em><a class="headerlink" href="#fire.api.model.punkttyper.Artskode.LOKATIONSKOORDINAT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Artskode.NETVAERK_AF_GOD_KVALITET">
+<code class="sig-name descname">NETVAERK_AF_GOD_KVALITET</code><em class="property"> = 2</em><a class="headerlink" href="#fire.api.model.punkttyper.Artskode.NETVAERK_AF_GOD_KVALITET" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Artskode.NETVAERK_AF_HOEJ_KVALITET">
+<code class="sig-name descname">NETVAERK_AF_HOEJ_KVALITET</code><em class="property"> = 3</em><a class="headerlink" href="#fire.api.model.punkttyper.Artskode.NETVAERK_AF_HOEJ_KVALITET" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Artskode.NETVAERK_AF_LAV_KVALITET">
+<code class="sig-name descname">NETVAERK_AF_LAV_KVALITET</code><em class="property"> = 4</em><a class="headerlink" href="#fire.api.model.punkttyper.Artskode.NETVAERK_AF_LAV_KVALITET" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Artskode.NULL">
+<code class="sig-name descname">NULL</code><em class="property"> = None</em><a class="headerlink" href="#fire.api.model.punkttyper.Artskode.NULL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Artskode.TRANSFORMERET">
+<code class="sig-name descname">TRANSFORMERET</code><em class="property"> = 6</em><a class="headerlink" href="#fire.api.model.punkttyper.Artskode.TRANSFORMERET" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Artskode.UKENDT_KOORDINATSYSTEM">
+<code class="sig-name descname">UKENDT_KOORDINATSYSTEM</code><em class="property"> = 7</em><a class="headerlink" href="#fire.api.model.punkttyper.Artskode.UKENDT_KOORDINATSYSTEM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="fire.api.model.punkttyper.Beregning">
+<em class="property">class </em><code class="sig-prename descclassname">fire.api.model.punkttyper.</code><code class="sig-name descname">Beregning</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.model.punkttyper.Beregning" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#fire.api.model.punkttyper.FikspunktregisterObjekt" title="fire.api.model.punkttyper.FikspunktregisterObjekt"><code class="xref py py-class docutils literal notranslate"><span class="pre">fire.api.model.punkttyper.FikspunktregisterObjekt</span></code></a></p>
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Beregning.koordinater">
+<code class="sig-name descname">koordinater</code><a class="headerlink" href="#fire.api.model.punkttyper.Beregning.koordinater" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Beregning.objektid">
+<code class="sig-name descname">objektid</code><a class="headerlink" href="#fire.api.model.punkttyper.Beregning.objektid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Beregning.observationer">
+<code class="sig-name descname">observationer</code><a class="headerlink" href="#fire.api.model.punkttyper.Beregning.observationer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Beregning.sagsevent">
+<code class="sig-name descname">sagsevent</code><a class="headerlink" href="#fire.api.model.punkttyper.Beregning.sagsevent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Beregning.sagseventfraid">
+<code class="sig-name descname">sagseventfraid</code><a class="headerlink" href="#fire.api.model.punkttyper.Beregning.sagseventfraid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Beregning.sagseventtilid">
+<code class="sig-name descname">sagseventtilid</code><a class="headerlink" href="#fire.api.model.punkttyper.Beregning.sagseventtilid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Beregning.slettet">
+<code class="sig-name descname">slettet</code><a class="headerlink" href="#fire.api.model.punkttyper.Beregning.slettet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="fire.api.model.punkttyper.Boolean">
+<em class="property">class </em><code class="sig-prename descclassname">fire.api.model.punkttyper.</code><code class="sig-name descname">Boolean</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.model.punkttyper.Boolean" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>An enumeration.</p>
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Boolean.FALSE">
+<code class="sig-name descname">FALSE</code><em class="property"> = 'false'</em><a class="headerlink" href="#fire.api.model.punkttyper.Boolean.FALSE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Boolean.TRUE">
+<code class="sig-name descname">TRUE</code><em class="property"> = 'true'</em><a class="headerlink" href="#fire.api.model.punkttyper.Boolean.TRUE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="fire.api.model.punkttyper.FikspunktregisterObjekt">
+<em class="property">class </em><code class="sig-prename descclassname">fire.api.model.punkttyper.</code><code class="sig-name descname">FikspunktregisterObjekt</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.model.punkttyper.FikspunktregisterObjekt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#fire.api.model.RegisteringTidObjekt" title="fire.api.model.RegisteringTidObjekt"><code class="xref py py-class docutils literal notranslate"><span class="pre">fire.api.model.RegisteringTidObjekt</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="fire.api.model.punkttyper.FikspunktsType">
+<em class="property">class </em><code class="sig-prename descclassname">fire.api.model.punkttyper.</code><code class="sig-name descname">FikspunktsType</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.model.punkttyper.FikspunktsType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>An enumeration.</p>
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.FikspunktsType.GI">
+<code class="sig-name descname">GI</code><em class="property"> = 1</em><a class="headerlink" href="#fire.api.model.punkttyper.FikspunktsType.GI" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.FikspunktsType.HJLPEPUNKT">
+<span id="fire.api.model.punkttyper.FikspunktsType.HJÆLPEPUNKT"></span><code class="sig-name descname">HJÆLPEPUNKT</code><em class="property"> = 5</em><a class="headerlink" href="#fire.api.model.punkttyper.FikspunktsType.HJLPEPUNKT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.FikspunktsType.HJDE">
+<span id="fire.api.model.punkttyper.FikspunktsType.HØJDE"></span><code class="sig-name descname">HØJDE</code><em class="property"> = 3</em><a class="headerlink" href="#fire.api.model.punkttyper.FikspunktsType.HJDE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.FikspunktsType.JESSEN">
+<code class="sig-name descname">JESSEN</code><em class="property"> = 4</em><a class="headerlink" href="#fire.api.model.punkttyper.FikspunktsType.JESSEN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.FikspunktsType.MV">
+<code class="sig-name descname">MV</code><em class="property"> = 2</em><a class="headerlink" href="#fire.api.model.punkttyper.FikspunktsType.MV" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.FikspunktsType.VANDSTANDSBRT">
+<span id="fire.api.model.punkttyper.FikspunktsType.VANDSTANDSBRÆT"></span><code class="sig-name descname">VANDSTANDSBRÆT</code><em class="property"> = 6</em><a class="headerlink" href="#fire.api.model.punkttyper.FikspunktsType.VANDSTANDSBRT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="fire.api.model.punkttyper.GeometriObjekt">
+<em class="property">class </em><code class="sig-prename descclassname">fire.api.model.punkttyper.</code><code class="sig-name descname">GeometriObjekt</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.model.punkttyper.GeometriObjekt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#fire.api.model.punkttyper.FikspunktregisterObjekt" title="fire.api.model.punkttyper.FikspunktregisterObjekt"><code class="xref py py-class docutils literal notranslate"><span class="pre">fire.api.model.punkttyper.FikspunktregisterObjekt</span></code></a></p>
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.GeometriObjekt.geometri">
+<code class="sig-name descname">geometri</code><a class="headerlink" href="#fire.api.model.punkttyper.GeometriObjekt.geometri" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="fire.api.model.punkttyper.GeometriObjekt.koordinater">
+<em class="property">property </em><code class="sig-name descname">koordinater</code><a class="headerlink" href="#fire.api.model.punkttyper.GeometriObjekt.koordinater" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.GeometriObjekt.objektid">
+<code class="sig-name descname">objektid</code><a class="headerlink" href="#fire.api.model.punkttyper.GeometriObjekt.objektid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.GeometriObjekt.punkt">
+<code class="sig-name descname">punkt</code><a class="headerlink" href="#fire.api.model.punkttyper.GeometriObjekt.punkt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.GeometriObjekt.punktid">
+<code class="sig-name descname">punktid</code><a class="headerlink" href="#fire.api.model.punkttyper.GeometriObjekt.punktid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.GeometriObjekt.sagsevent">
+<code class="sig-name descname">sagsevent</code><a class="headerlink" href="#fire.api.model.punkttyper.GeometriObjekt.sagsevent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.GeometriObjekt.sagseventfraid">
+<code class="sig-name descname">sagseventfraid</code><a class="headerlink" href="#fire.api.model.punkttyper.GeometriObjekt.sagseventfraid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.GeometriObjekt.sagseventtilid">
+<code class="sig-name descname">sagseventtilid</code><a class="headerlink" href="#fire.api.model.punkttyper.GeometriObjekt.sagseventtilid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.GeometriObjekt.slettet">
+<code class="sig-name descname">slettet</code><a class="headerlink" href="#fire.api.model.punkttyper.GeometriObjekt.slettet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="fire.api.model.punkttyper.Ident">
+<em class="property">class </em><code class="sig-prename descclassname">fire.api.model.punkttyper.</code><code class="sig-name descname">Ident</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">punktinfo</span><span class="p">:</span> <span class="n">Union<span class="p">[</span><a class="reference internal" href="#fire.api.model.punkttyper.PunktInformation" title="fire.api.model.punkttyper.PunktInformation">PunktInformation</a><span class="p">, </span>str<span class="p">]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.model.punkttyper.Ident" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py class">
+<dt id="fire.api.model.punkttyper.Ident.IdentType">
+<em class="property">class </em><code class="sig-name descname">IdentType</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.model.punkttyper.Ident.IdentType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>An enumeration.</p>
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Ident.IdentType.DIVERSE">
+<code class="sig-name descname">DIVERSE</code><em class="property"> = 7</em><a class="headerlink" href="#fire.api.model.punkttyper.Ident.IdentType.DIVERSE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Ident.IdentType.EKSTERN">
+<code class="sig-name descname">EKSTERN</code><em class="property"> = 6</em><a class="headerlink" href="#fire.api.model.punkttyper.Ident.IdentType.EKSTERN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Ident.IdentType.GI">
+<code class="sig-name descname">GI</code><em class="property"> = 1</em><a class="headerlink" href="#fire.api.model.punkttyper.Ident.IdentType.GI" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Ident.IdentType.GNSS">
+<code class="sig-name descname">GNSS</code><em class="property"> = 2</em><a class="headerlink" href="#fire.api.model.punkttyper.Ident.IdentType.GNSS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Ident.IdentType.JESSEN">
+<code class="sig-name descname">JESSEN</code><em class="property"> = 4</em><a class="headerlink" href="#fire.api.model.punkttyper.Ident.IdentType.JESSEN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Ident.IdentType.KORTUUID">
+<code class="sig-name descname">KORTUUID</code><em class="property"> = 10</em><a class="headerlink" href="#fire.api.model.punkttyper.Ident.IdentType.KORTUUID" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Ident.IdentType.LANDSNR">
+<code class="sig-name descname">LANDSNR</code><em class="property"> = 3</em><a class="headerlink" href="#fire.api.model.punkttyper.Ident.IdentType.LANDSNR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Ident.IdentType.REFGEO">
+<code class="sig-name descname">REFGEO</code><em class="property"> = 8</em><a class="headerlink" href="#fire.api.model.punkttyper.Ident.IdentType.REFGEO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Ident.IdentType.STATION">
+<code class="sig-name descname">STATION</code><em class="property"> = 5</em><a class="headerlink" href="#fire.api.model.punkttyper.Ident.IdentType.STATION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Ident.IdentType.UKENDT">
+<code class="sig-name descname">UKENDT</code><em class="property"> = 9</em><a class="headerlink" href="#fire.api.model.punkttyper.Ident.IdentType.UKENDT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="fire.api.model.punkttyper.Koordinat">
+<em class="property">class </em><code class="sig-prename descclassname">fire.api.model.punkttyper.</code><code class="sig-name descname">Koordinat</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.model.punkttyper.Koordinat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#fire.api.model.punkttyper.FikspunktregisterObjekt" title="fire.api.model.punkttyper.FikspunktregisterObjekt"><code class="xref py py-class docutils literal notranslate"><span class="pre">fire.api.model.punkttyper.FikspunktregisterObjekt</span></code></a></p>
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Koordinat.artskode">
+<code class="sig-name descname">artskode</code><a class="headerlink" href="#fire.api.model.punkttyper.Koordinat.artskode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Koordinat.beregninger">
+<code class="sig-name descname">beregninger</code><a class="headerlink" href="#fire.api.model.punkttyper.Koordinat.beregninger" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="fire.api.model.punkttyper.Koordinat.fejlmeldt">
+<em class="property">property </em><code class="sig-name descname">fejlmeldt</code><a class="headerlink" href="#fire.api.model.punkttyper.Koordinat.fejlmeldt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Koordinat.objektid">
+<code class="sig-name descname">objektid</code><a class="headerlink" href="#fire.api.model.punkttyper.Koordinat.objektid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Koordinat.punkt">
+<code class="sig-name descname">punkt</code><a class="headerlink" href="#fire.api.model.punkttyper.Koordinat.punkt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Koordinat.punktid">
+<code class="sig-name descname">punktid</code><a class="headerlink" href="#fire.api.model.punkttyper.Koordinat.punktid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Koordinat.sagsevent">
+<code class="sig-name descname">sagsevent</code><a class="headerlink" href="#fire.api.model.punkttyper.Koordinat.sagsevent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Koordinat.sagseventfraid">
+<code class="sig-name descname">sagseventfraid</code><a class="headerlink" href="#fire.api.model.punkttyper.Koordinat.sagseventfraid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Koordinat.sagseventtilid">
+<code class="sig-name descname">sagseventtilid</code><a class="headerlink" href="#fire.api.model.punkttyper.Koordinat.sagseventtilid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Koordinat.slettet">
+<code class="sig-name descname">slettet</code><a class="headerlink" href="#fire.api.model.punkttyper.Koordinat.slettet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Koordinat.srid">
+<code class="sig-name descname">srid</code><a class="headerlink" href="#fire.api.model.punkttyper.Koordinat.srid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Koordinat.sridid">
+<code class="sig-name descname">sridid</code><a class="headerlink" href="#fire.api.model.punkttyper.Koordinat.sridid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Koordinat.sx">
+<code class="sig-name descname">sx</code><a class="headerlink" href="#fire.api.model.punkttyper.Koordinat.sx" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Koordinat.sy">
+<code class="sig-name descname">sy</code><a class="headerlink" href="#fire.api.model.punkttyper.Koordinat.sy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Koordinat.sz">
+<code class="sig-name descname">sz</code><a class="headerlink" href="#fire.api.model.punkttyper.Koordinat.sz" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Koordinat.t">
+<code class="sig-name descname">t</code><a class="headerlink" href="#fire.api.model.punkttyper.Koordinat.t" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Koordinat.transformeret">
+<code class="sig-name descname">transformeret</code><a class="headerlink" href="#fire.api.model.punkttyper.Koordinat.transformeret" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Koordinat.x">
+<code class="sig-name descname">x</code><a class="headerlink" href="#fire.api.model.punkttyper.Koordinat.x" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Koordinat.y">
+<code class="sig-name descname">y</code><a class="headerlink" href="#fire.api.model.punkttyper.Koordinat.y" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Koordinat.z">
+<code class="sig-name descname">z</code><a class="headerlink" href="#fire.api.model.punkttyper.Koordinat.z" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="fire.api.model.punkttyper.Observation">
+<em class="property">class </em><code class="sig-prename descclassname">fire.api.model.punkttyper.</code><code class="sig-name descname">Observation</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.model.punkttyper.Observation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#fire.api.model.punkttyper.FikspunktregisterObjekt" title="fire.api.model.punkttyper.FikspunktregisterObjekt"><code class="xref py py-class docutils literal notranslate"><span class="pre">fire.api.model.punkttyper.FikspunktregisterObjekt</span></code></a></p>
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Observation.antal">
+<code class="sig-name descname">antal</code><a class="headerlink" href="#fire.api.model.punkttyper.Observation.antal" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Observation.beregninger">
+<code class="sig-name descname">beregninger</code><a class="headerlink" href="#fire.api.model.punkttyper.Observation.beregninger" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Observation.gruppe">
+<code class="sig-name descname">gruppe</code><a class="headerlink" href="#fire.api.model.punkttyper.Observation.gruppe" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Observation.id">
+<code class="sig-name descname">id</code><a class="headerlink" href="#fire.api.model.punkttyper.Observation.id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Observation.objektid">
+<code class="sig-name descname">objektid</code><a class="headerlink" href="#fire.api.model.punkttyper.Observation.objektid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Observation.observationstidspunkt">
+<code class="sig-name descname">observationstidspunkt</code><a class="headerlink" href="#fire.api.model.punkttyper.Observation.observationstidspunkt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Observation.observationstype">
+<code class="sig-name descname">observationstype</code><a class="headerlink" href="#fire.api.model.punkttyper.Observation.observationstype" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Observation.observationstypeid">
+<code class="sig-name descname">observationstypeid</code><a class="headerlink" href="#fire.api.model.punkttyper.Observation.observationstypeid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Observation.opstillingspunkt">
+<code class="sig-name descname">opstillingspunkt</code><a class="headerlink" href="#fire.api.model.punkttyper.Observation.opstillingspunkt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Observation.opstillingspunktid">
+<code class="sig-name descname">opstillingspunktid</code><a class="headerlink" href="#fire.api.model.punkttyper.Observation.opstillingspunktid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Observation.sagsevent">
+<code class="sig-name descname">sagsevent</code><a class="headerlink" href="#fire.api.model.punkttyper.Observation.sagsevent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Observation.sagseventfraid">
+<code class="sig-name descname">sagseventfraid</code><a class="headerlink" href="#fire.api.model.punkttyper.Observation.sagseventfraid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Observation.sagseventtilid">
+<code class="sig-name descname">sagseventtilid</code><a class="headerlink" href="#fire.api.model.punkttyper.Observation.sagseventtilid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Observation.sigtepunkt">
+<code class="sig-name descname">sigtepunkt</code><a class="headerlink" href="#fire.api.model.punkttyper.Observation.sigtepunkt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Observation.sigtepunktid">
+<code class="sig-name descname">sigtepunktid</code><a class="headerlink" href="#fire.api.model.punkttyper.Observation.sigtepunktid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Observation.slettet">
+<code class="sig-name descname">slettet</code><a class="headerlink" href="#fire.api.model.punkttyper.Observation.slettet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Observation.value1">
+<code class="sig-name descname">value1</code><a class="headerlink" href="#fire.api.model.punkttyper.Observation.value1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Observation.value10">
+<code class="sig-name descname">value10</code><a class="headerlink" href="#fire.api.model.punkttyper.Observation.value10" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Observation.value11">
+<code class="sig-name descname">value11</code><a class="headerlink" href="#fire.api.model.punkttyper.Observation.value11" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Observation.value12">
+<code class="sig-name descname">value12</code><a class="headerlink" href="#fire.api.model.punkttyper.Observation.value12" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Observation.value13">
+<code class="sig-name descname">value13</code><a class="headerlink" href="#fire.api.model.punkttyper.Observation.value13" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Observation.value14">
+<code class="sig-name descname">value14</code><a class="headerlink" href="#fire.api.model.punkttyper.Observation.value14" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Observation.value15">
+<code class="sig-name descname">value15</code><a class="headerlink" href="#fire.api.model.punkttyper.Observation.value15" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Observation.value2">
+<code class="sig-name descname">value2</code><a class="headerlink" href="#fire.api.model.punkttyper.Observation.value2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Observation.value3">
+<code class="sig-name descname">value3</code><a class="headerlink" href="#fire.api.model.punkttyper.Observation.value3" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Observation.value4">
+<code class="sig-name descname">value4</code><a class="headerlink" href="#fire.api.model.punkttyper.Observation.value4" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Observation.value5">
+<code class="sig-name descname">value5</code><a class="headerlink" href="#fire.api.model.punkttyper.Observation.value5" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Observation.value6">
+<code class="sig-name descname">value6</code><a class="headerlink" href="#fire.api.model.punkttyper.Observation.value6" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Observation.value7">
+<code class="sig-name descname">value7</code><a class="headerlink" href="#fire.api.model.punkttyper.Observation.value7" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Observation.value8">
+<code class="sig-name descname">value8</code><a class="headerlink" href="#fire.api.model.punkttyper.Observation.value8" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Observation.value9">
+<code class="sig-name descname">value9</code><a class="headerlink" href="#fire.api.model.punkttyper.Observation.value9" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="fire.api.model.punkttyper.ObservationsType">
+<em class="property">class </em><code class="sig-prename descclassname">fire.api.model.punkttyper.</code><code class="sig-name descname">ObservationsType</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.model.punkttyper.ObservationsType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.ext.declarative.api.Base</span></code></p>
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.ObservationsType.beskrivelse">
+<code class="sig-name descname">beskrivelse</code><a class="headerlink" href="#fire.api.model.punkttyper.ObservationsType.beskrivelse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.ObservationsType.name">
+<code class="sig-name descname">name</code><a class="headerlink" href="#fire.api.model.punkttyper.ObservationsType.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.ObservationsType.objektid">
+<code class="sig-name descname">objektid</code><a class="headerlink" href="#fire.api.model.punkttyper.ObservationsType.objektid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.ObservationsType.observationer">
+<code class="sig-name descname">observationer</code><a class="headerlink" href="#fire.api.model.punkttyper.ObservationsType.observationer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.ObservationsType.observationstypeid">
+<code class="sig-name descname">observationstypeid</code><a class="headerlink" href="#fire.api.model.punkttyper.ObservationsType.observationstypeid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.ObservationsType.sigtepunkt">
+<code class="sig-name descname">sigtepunkt</code><a class="headerlink" href="#fire.api.model.punkttyper.ObservationsType.sigtepunkt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.ObservationsType.value1">
+<code class="sig-name descname">value1</code><a class="headerlink" href="#fire.api.model.punkttyper.ObservationsType.value1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.ObservationsType.value10">
+<code class="sig-name descname">value10</code><a class="headerlink" href="#fire.api.model.punkttyper.ObservationsType.value10" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.ObservationsType.value11">
+<code class="sig-name descname">value11</code><a class="headerlink" href="#fire.api.model.punkttyper.ObservationsType.value11" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.ObservationsType.value12">
+<code class="sig-name descname">value12</code><a class="headerlink" href="#fire.api.model.punkttyper.ObservationsType.value12" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.ObservationsType.value13">
+<code class="sig-name descname">value13</code><a class="headerlink" href="#fire.api.model.punkttyper.ObservationsType.value13" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.ObservationsType.value14">
+<code class="sig-name descname">value14</code><a class="headerlink" href="#fire.api.model.punkttyper.ObservationsType.value14" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.ObservationsType.value15">
+<code class="sig-name descname">value15</code><a class="headerlink" href="#fire.api.model.punkttyper.ObservationsType.value15" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.ObservationsType.value2">
+<code class="sig-name descname">value2</code><a class="headerlink" href="#fire.api.model.punkttyper.ObservationsType.value2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.ObservationsType.value3">
+<code class="sig-name descname">value3</code><a class="headerlink" href="#fire.api.model.punkttyper.ObservationsType.value3" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.ObservationsType.value4">
+<code class="sig-name descname">value4</code><a class="headerlink" href="#fire.api.model.punkttyper.ObservationsType.value4" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.ObservationsType.value5">
+<code class="sig-name descname">value5</code><a class="headerlink" href="#fire.api.model.punkttyper.ObservationsType.value5" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.ObservationsType.value6">
+<code class="sig-name descname">value6</code><a class="headerlink" href="#fire.api.model.punkttyper.ObservationsType.value6" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.ObservationsType.value7">
+<code class="sig-name descname">value7</code><a class="headerlink" href="#fire.api.model.punkttyper.ObservationsType.value7" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.ObservationsType.value8">
+<code class="sig-name descname">value8</code><a class="headerlink" href="#fire.api.model.punkttyper.ObservationsType.value8" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.ObservationsType.value9">
+<code class="sig-name descname">value9</code><a class="headerlink" href="#fire.api.model.punkttyper.ObservationsType.value9" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="fire.api.model.punkttyper.Punkt">
+<em class="property">class </em><code class="sig-prename descclassname">fire.api.model.punkttyper.</code><code class="sig-name descname">Punkt</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.model.punkttyper.Punkt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#fire.api.model.punkttyper.FikspunktregisterObjekt" title="fire.api.model.punkttyper.FikspunktregisterObjekt"><code class="xref py py-class docutils literal notranslate"><span class="pre">fire.api.model.punkttyper.FikspunktregisterObjekt</span></code></a></p>
+<dl class="py method">
+<dt id="fire.api.model.punkttyper.Punkt.geometri">
+<em class="property">property </em><code class="sig-name descname">geometri</code><a class="headerlink" href="#fire.api.model.punkttyper.Punkt.geometri" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Punkt.geometriobjekter">
+<code class="sig-name descname">geometriobjekter</code><a class="headerlink" href="#fire.api.model.punkttyper.Punkt.geometriobjekter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Punkt.id">
+<code class="sig-name descname">id</code><a class="headerlink" href="#fire.api.model.punkttyper.Punkt.id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="fire.api.model.punkttyper.Punkt.ident">
+<em class="property">property </em><code class="sig-name descname">ident</code><a class="headerlink" href="#fire.api.model.punkttyper.Punkt.ident" title="Permalink to this definition">¶</a></dt>
+<dd><p>Udtræk det geodætisk mest læsbare ident.</p>
+<dl class="simple">
+<dt>I nævnte rækkefølge:</dt><dd><ul class="simple">
+<li><p>IDENT:GI</p></li>
+<li><p>IDENT:GNSS,</p></li>
+<li><p>IDENT:landsr</p></li>
+<li><p>IDENT:jessen</p></li>
+<li><p>IDENT:station</p></li>
+<li><p>IDENT:ekstern</p></li>
+<li><p>IDENT:diverse</p></li>
+<li><p>IDENT:refgeo_id.</p></li>
+</ul>
+</dd>
+</dl>
+<p>Hvis et punkt overhovedet ikke har noget ident returneres uuiden
+uforandret.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fire.api.model.punkttyper.Punkt.identer">
+<em class="property">property </em><code class="sig-name descname">identer</code><a class="headerlink" href="#fire.api.model.punkttyper.Punkt.identer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returner liste over alle identer der er tilknyttet Punktet</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Punkt.koordinater">
+<code class="sig-name descname">koordinater</code><a class="headerlink" href="#fire.api.model.punkttyper.Punkt.koordinater" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="fire.api.model.punkttyper.Punkt.landsnummer">
+<em class="property">property </em><code class="sig-name descname">landsnummer</code><a class="headerlink" href="#fire.api.model.punkttyper.Punkt.landsnummer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Punkt.objektid">
+<code class="sig-name descname">objektid</code><a class="headerlink" href="#fire.api.model.punkttyper.Punkt.objektid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Punkt.observationer_fra">
+<code class="sig-name descname">observationer_fra</code><a class="headerlink" href="#fire.api.model.punkttyper.Punkt.observationer_fra" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Punkt.observationer_til">
+<code class="sig-name descname">observationer_til</code><a class="headerlink" href="#fire.api.model.punkttyper.Punkt.observationer_til" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Punkt.punktinformationer">
+<code class="sig-name descname">punktinformationer</code><a class="headerlink" href="#fire.api.model.punkttyper.Punkt.punktinformationer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Punkt.sagsevent">
+<code class="sig-name descname">sagsevent</code><a class="headerlink" href="#fire.api.model.punkttyper.Punkt.sagsevent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Punkt.sagseventfraid">
+<code class="sig-name descname">sagseventfraid</code><a class="headerlink" href="#fire.api.model.punkttyper.Punkt.sagseventfraid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Punkt.sagseventtilid">
+<code class="sig-name descname">sagseventtilid</code><a class="headerlink" href="#fire.api.model.punkttyper.Punkt.sagseventtilid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Punkt.slettet">
+<code class="sig-name descname">slettet</code><a class="headerlink" href="#fire.api.model.punkttyper.Punkt.slettet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="fire.api.model.punkttyper.Punkt.tabtgaet">
+<span id="fire.api.model.punkttyper.Punkt.tabtgået"></span><em class="property">property </em><code class="sig-name descname">tabtgået</code><a class="headerlink" href="#fire.api.model.punkttyper.Punkt.tabtgaet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="fire.api.model.punkttyper.PunktInformation">
+<em class="property">class </em><code class="sig-prename descclassname">fire.api.model.punkttyper.</code><code class="sig-name descname">PunktInformation</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.model.punkttyper.PunktInformation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#fire.api.model.punkttyper.FikspunktregisterObjekt" title="fire.api.model.punkttyper.FikspunktregisterObjekt"><code class="xref py py-class docutils literal notranslate"><span class="pre">fire.api.model.punkttyper.FikspunktregisterObjekt</span></code></a></p>
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.PunktInformation.infotype">
+<code class="sig-name descname">infotype</code><a class="headerlink" href="#fire.api.model.punkttyper.PunktInformation.infotype" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.PunktInformation.infotypeid">
+<code class="sig-name descname">infotypeid</code><a class="headerlink" href="#fire.api.model.punkttyper.PunktInformation.infotypeid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.PunktInformation.objektid">
+<code class="sig-name descname">objektid</code><a class="headerlink" href="#fire.api.model.punkttyper.PunktInformation.objektid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.PunktInformation.punkt">
+<code class="sig-name descname">punkt</code><a class="headerlink" href="#fire.api.model.punkttyper.PunktInformation.punkt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.PunktInformation.punktid">
+<code class="sig-name descname">punktid</code><a class="headerlink" href="#fire.api.model.punkttyper.PunktInformation.punktid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.PunktInformation.sagsevent">
+<code class="sig-name descname">sagsevent</code><a class="headerlink" href="#fire.api.model.punkttyper.PunktInformation.sagsevent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.PunktInformation.sagseventfraid">
+<code class="sig-name descname">sagseventfraid</code><a class="headerlink" href="#fire.api.model.punkttyper.PunktInformation.sagseventfraid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.PunktInformation.sagseventtilid">
+<code class="sig-name descname">sagseventtilid</code><a class="headerlink" href="#fire.api.model.punkttyper.PunktInformation.sagseventtilid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.PunktInformation.slettet">
+<code class="sig-name descname">slettet</code><a class="headerlink" href="#fire.api.model.punkttyper.PunktInformation.slettet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.PunktInformation.tal">
+<code class="sig-name descname">tal</code><a class="headerlink" href="#fire.api.model.punkttyper.PunktInformation.tal" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.PunktInformation.tekst">
+<code class="sig-name descname">tekst</code><a class="headerlink" href="#fire.api.model.punkttyper.PunktInformation.tekst" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="fire.api.model.punkttyper.PunktInformationType">
+<em class="property">class </em><code class="sig-prename descclassname">fire.api.model.punkttyper.</code><code class="sig-name descname">PunktInformationType</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.model.punkttyper.PunktInformationType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.ext.declarative.api.Base</span></code></p>
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.PunktInformationType.anvendelse">
+<code class="sig-name descname">anvendelse</code><a class="headerlink" href="#fire.api.model.punkttyper.PunktInformationType.anvendelse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.PunktInformationType.beskrivelse">
+<code class="sig-name descname">beskrivelse</code><a class="headerlink" href="#fire.api.model.punkttyper.PunktInformationType.beskrivelse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.PunktInformationType.infotypeid">
+<code class="sig-name descname">infotypeid</code><a class="headerlink" href="#fire.api.model.punkttyper.PunktInformationType.infotypeid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.PunktInformationType.name">
+<code class="sig-name descname">name</code><a class="headerlink" href="#fire.api.model.punkttyper.PunktInformationType.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.PunktInformationType.objektid">
+<code class="sig-name descname">objektid</code><a class="headerlink" href="#fire.api.model.punkttyper.PunktInformationType.objektid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="fire.api.model.punkttyper.PunktInformationTypeAnvendelse">
+<em class="property">class </em><code class="sig-prename descclassname">fire.api.model.punkttyper.</code><code class="sig-name descname">PunktInformationTypeAnvendelse</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.model.punkttyper.PunktInformationTypeAnvendelse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>An enumeration.</p>
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.PunktInformationTypeAnvendelse.FLAG">
+<code class="sig-name descname">FLAG</code><em class="property"> = 'FLAG'</em><a class="headerlink" href="#fire.api.model.punkttyper.PunktInformationTypeAnvendelse.FLAG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.PunktInformationTypeAnvendelse.TAL">
+<code class="sig-name descname">TAL</code><em class="property"> = 'TAL'</em><a class="headerlink" href="#fire.api.model.punkttyper.PunktInformationTypeAnvendelse.TAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.PunktInformationTypeAnvendelse.TEKST">
+<code class="sig-name descname">TEKST</code><em class="property"> = 'TEKST'</em><a class="headerlink" href="#fire.api.model.punkttyper.PunktInformationTypeAnvendelse.TEKST" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="fire.api.model.punkttyper.Srid">
+<em class="property">class </em><code class="sig-prename descclassname">fire.api.model.punkttyper.</code><code class="sig-name descname">Srid</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.model.punkttyper.Srid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.ext.declarative.api.Base</span></code></p>
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Srid.beskrivelse">
+<code class="sig-name descname">beskrivelse</code><a class="headerlink" href="#fire.api.model.punkttyper.Srid.beskrivelse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Srid.name">
+<code class="sig-name descname">name</code><a class="headerlink" href="#fire.api.model.punkttyper.Srid.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Srid.objektid">
+<code class="sig-name descname">objektid</code><a class="headerlink" href="#fire.api.model.punkttyper.Srid.objektid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Srid.sridid">
+<code class="sig-name descname">sridid</code><a class="headerlink" href="#fire.api.model.punkttyper.Srid.sridid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Srid.x">
+<code class="sig-name descname">x</code><a class="headerlink" href="#fire.api.model.punkttyper.Srid.x" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Srid.y">
+<code class="sig-name descname">y</code><a class="headerlink" href="#fire.api.model.punkttyper.Srid.y" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.punkttyper.Srid.z">
+<code class="sig-name descname">z</code><a class="headerlink" href="#fire.api.model.punkttyper.Srid.z" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-fire.api.model.sagstyper"></span><dl class="py class">
+<dt id="fire.api.model.sagstyper.EventType">
+<em class="property">class </em><code class="sig-prename descclassname">fire.api.model.sagstyper.</code><code class="sig-name descname">EventType</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.model.sagstyper.EventType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>An enumeration.</p>
+<dl class="py attribute">
+<dt id="fire.api.model.sagstyper.EventType.KOMMENTAR">
+<code class="sig-name descname">KOMMENTAR</code><em class="property"> = 9</em><a class="headerlink" href="#fire.api.model.sagstyper.EventType.KOMMENTAR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.sagstyper.EventType.KOORDINAT_BEREGNET">
+<code class="sig-name descname">KOORDINAT_BEREGNET</code><em class="property"> = 1</em><a class="headerlink" href="#fire.api.model.sagstyper.EventType.KOORDINAT_BEREGNET" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.sagstyper.EventType.KOORDINAT_NEDLAGT">
+<code class="sig-name descname">KOORDINAT_NEDLAGT</code><em class="property"> = 2</em><a class="headerlink" href="#fire.api.model.sagstyper.EventType.KOORDINAT_NEDLAGT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.sagstyper.EventType.OBSERVATION_INDSAT">
+<code class="sig-name descname">OBSERVATION_INDSAT</code><em class="property"> = 3</em><a class="headerlink" href="#fire.api.model.sagstyper.EventType.OBSERVATION_INDSAT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.sagstyper.EventType.OBSERVATION_NEDLAGT">
+<code class="sig-name descname">OBSERVATION_NEDLAGT</code><em class="property"> = 4</em><a class="headerlink" href="#fire.api.model.sagstyper.EventType.OBSERVATION_NEDLAGT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.sagstyper.EventType.PUNKTINFO_FJERNET">
+<code class="sig-name descname">PUNKTINFO_FJERNET</code><em class="property"> = 6</em><a class="headerlink" href="#fire.api.model.sagstyper.EventType.PUNKTINFO_FJERNET" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.sagstyper.EventType.PUNKTINFO_TILFOEJET">
+<code class="sig-name descname">PUNKTINFO_TILFOEJET</code><em class="property"> = 5</em><a class="headerlink" href="#fire.api.model.sagstyper.EventType.PUNKTINFO_TILFOEJET" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.sagstyper.EventType.PUNKT_NEDLAGT">
+<code class="sig-name descname">PUNKT_NEDLAGT</code><em class="property"> = 8</em><a class="headerlink" href="#fire.api.model.sagstyper.EventType.PUNKT_NEDLAGT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.sagstyper.EventType.PUNKT_OPRETTET">
+<code class="sig-name descname">PUNKT_OPRETTET</code><em class="property"> = 7</em><a class="headerlink" href="#fire.api.model.sagstyper.EventType.PUNKT_OPRETTET" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="fire.api.model.sagstyper.Sag">
+<em class="property">class </em><code class="sig-prename descclassname">fire.api.model.sagstyper.</code><code class="sig-name descname">Sag</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.model.sagstyper.Sag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#fire.api.model.RegisteringFraObjekt" title="fire.api.model.RegisteringFraObjekt"><code class="xref py py-class docutils literal notranslate"><span class="pre">fire.api.model.RegisteringFraObjekt</span></code></a></p>
+<dl class="py method">
+<dt id="fire.api.model.sagstyper.Sag.aktiv">
+<em class="property">property </em><code class="sig-name descname">aktiv</code><a class="headerlink" href="#fire.api.model.sagstyper.Sag.aktiv" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="fire.api.model.sagstyper.Sag.behandler">
+<em class="property">property </em><code class="sig-name descname">behandler</code><a class="headerlink" href="#fire.api.model.sagstyper.Sag.behandler" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="fire.api.model.sagstyper.Sag.beskrivelse">
+<em class="property">property </em><code class="sig-name descname">beskrivelse</code><a class="headerlink" href="#fire.api.model.sagstyper.Sag.beskrivelse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.sagstyper.Sag.id">
+<code class="sig-name descname">id</code><a class="headerlink" href="#fire.api.model.sagstyper.Sag.id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="fire.api.model.sagstyper.Sag.journalnummer">
+<em class="property">property </em><code class="sig-name descname">journalnummer</code><a class="headerlink" href="#fire.api.model.sagstyper.Sag.journalnummer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.sagstyper.Sag.objektid">
+<code class="sig-name descname">objektid</code><a class="headerlink" href="#fire.api.model.sagstyper.Sag.objektid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.sagstyper.Sag.sagsevents">
+<code class="sig-name descname">sagsevents</code><a class="headerlink" href="#fire.api.model.sagstyper.Sag.sagsevents" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.sagstyper.Sag.sagsinfos">
+<code class="sig-name descname">sagsinfos</code><a class="headerlink" href="#fire.api.model.sagstyper.Sag.sagsinfos" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="fire.api.model.sagstyper.Sagsevent">
+<em class="property">class </em><code class="sig-prename descclassname">fire.api.model.sagstyper.</code><code class="sig-name descname">Sagsevent</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.model.sagstyper.Sagsevent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#fire.api.model.RegisteringFraObjekt" title="fire.api.model.RegisteringFraObjekt"><code class="xref py py-class docutils literal notranslate"><span class="pre">fire.api.model.RegisteringFraObjekt</span></code></a></p>
+<dl class="py attribute">
+<dt id="fire.api.model.sagstyper.Sagsevent.beregninger">
+<code class="sig-name descname">beregninger</code><a class="headerlink" href="#fire.api.model.sagstyper.Sagsevent.beregninger" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.sagstyper.Sagsevent.beregninger_slettede">
+<code class="sig-name descname">beregninger_slettede</code><a class="headerlink" href="#fire.api.model.sagstyper.Sagsevent.beregninger_slettede" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="fire.api.model.sagstyper.Sagsevent.beskrivelse">
+<em class="property">property </em><code class="sig-name descname">beskrivelse</code><a class="headerlink" href="#fire.api.model.sagstyper.Sagsevent.beskrivelse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.sagstyper.Sagsevent.eventtype">
+<code class="sig-name descname">eventtype</code><a class="headerlink" href="#fire.api.model.sagstyper.Sagsevent.eventtype" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.sagstyper.Sagsevent.geometriobjekter">
+<code class="sig-name descname">geometriobjekter</code><a class="headerlink" href="#fire.api.model.sagstyper.Sagsevent.geometriobjekter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.sagstyper.Sagsevent.geometriobjekter_slettede">
+<code class="sig-name descname">geometriobjekter_slettede</code><a class="headerlink" href="#fire.api.model.sagstyper.Sagsevent.geometriobjekter_slettede" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.sagstyper.Sagsevent.id">
+<code class="sig-name descname">id</code><a class="headerlink" href="#fire.api.model.sagstyper.Sagsevent.id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.sagstyper.Sagsevent.koordinater">
+<code class="sig-name descname">koordinater</code><a class="headerlink" href="#fire.api.model.sagstyper.Sagsevent.koordinater" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.sagstyper.Sagsevent.koordinater_slettede">
+<code class="sig-name descname">koordinater_slettede</code><a class="headerlink" href="#fire.api.model.sagstyper.Sagsevent.koordinater_slettede" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.sagstyper.Sagsevent.objektid">
+<code class="sig-name descname">objektid</code><a class="headerlink" href="#fire.api.model.sagstyper.Sagsevent.objektid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.sagstyper.Sagsevent.observationer">
+<code class="sig-name descname">observationer</code><a class="headerlink" href="#fire.api.model.sagstyper.Sagsevent.observationer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.sagstyper.Sagsevent.observationer_slettede">
+<code class="sig-name descname">observationer_slettede</code><a class="headerlink" href="#fire.api.model.sagstyper.Sagsevent.observationer_slettede" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.sagstyper.Sagsevent.punkter">
+<code class="sig-name descname">punkter</code><a class="headerlink" href="#fire.api.model.sagstyper.Sagsevent.punkter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.sagstyper.Sagsevent.punkter_slettede">
+<code class="sig-name descname">punkter_slettede</code><a class="headerlink" href="#fire.api.model.sagstyper.Sagsevent.punkter_slettede" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.sagstyper.Sagsevent.punktinformationer">
+<code class="sig-name descname">punktinformationer</code><a class="headerlink" href="#fire.api.model.sagstyper.Sagsevent.punktinformationer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.sagstyper.Sagsevent.punktinformationer_slettede">
+<code class="sig-name descname">punktinformationer_slettede</code><a class="headerlink" href="#fire.api.model.sagstyper.Sagsevent.punktinformationer_slettede" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.sagstyper.Sagsevent.sag">
+<code class="sig-name descname">sag</code><a class="headerlink" href="#fire.api.model.sagstyper.Sagsevent.sag" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.sagstyper.Sagsevent.sagseventinfos">
+<code class="sig-name descname">sagseventinfos</code><a class="headerlink" href="#fire.api.model.sagstyper.Sagsevent.sagseventinfos" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.sagstyper.Sagsevent.sagsid">
+<code class="sig-name descname">sagsid</code><a class="headerlink" href="#fire.api.model.sagstyper.Sagsevent.sagsid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="fire.api.model.sagstyper.SagseventInfo">
+<em class="property">class </em><code class="sig-prename descclassname">fire.api.model.sagstyper.</code><code class="sig-name descname">SagseventInfo</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.model.sagstyper.SagseventInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#fire.api.model.RegisteringTidObjekt" title="fire.api.model.RegisteringTidObjekt"><code class="xref py py-class docutils literal notranslate"><span class="pre">fire.api.model.RegisteringTidObjekt</span></code></a></p>
+<dl class="py attribute">
+<dt id="fire.api.model.sagstyper.SagseventInfo.beskrivelse">
+<code class="sig-name descname">beskrivelse</code><a class="headerlink" href="#fire.api.model.sagstyper.SagseventInfo.beskrivelse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.sagstyper.SagseventInfo.htmler">
+<code class="sig-name descname">htmler</code><a class="headerlink" href="#fire.api.model.sagstyper.SagseventInfo.htmler" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.sagstyper.SagseventInfo.materialer">
+<code class="sig-name descname">materialer</code><a class="headerlink" href="#fire.api.model.sagstyper.SagseventInfo.materialer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.sagstyper.SagseventInfo.objektid">
+<code class="sig-name descname">objektid</code><a class="headerlink" href="#fire.api.model.sagstyper.SagseventInfo.objektid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.sagstyper.SagseventInfo.sagsevent">
+<code class="sig-name descname">sagsevent</code><a class="headerlink" href="#fire.api.model.sagstyper.SagseventInfo.sagsevent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.sagstyper.SagseventInfo.sagseventid">
+<code class="sig-name descname">sagseventid</code><a class="headerlink" href="#fire.api.model.sagstyper.SagseventInfo.sagseventid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="fire.api.model.sagstyper.SagseventInfoHtml">
+<em class="property">class </em><code class="sig-prename descclassname">fire.api.model.sagstyper.</code><code class="sig-name descname">SagseventInfoHtml</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.model.sagstyper.SagseventInfoHtml" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.ext.declarative.api.Base</span></code></p>
+<dl class="py attribute">
+<dt id="fire.api.model.sagstyper.SagseventInfoHtml.html">
+<code class="sig-name descname">html</code><a class="headerlink" href="#fire.api.model.sagstyper.SagseventInfoHtml.html" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.sagstyper.SagseventInfoHtml.objektid">
+<code class="sig-name descname">objektid</code><a class="headerlink" href="#fire.api.model.sagstyper.SagseventInfoHtml.objektid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.sagstyper.SagseventInfoHtml.sagseventinfo">
+<code class="sig-name descname">sagseventinfo</code><a class="headerlink" href="#fire.api.model.sagstyper.SagseventInfoHtml.sagseventinfo" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.sagstyper.SagseventInfoHtml.sagseventinfoobjektid">
+<code class="sig-name descname">sagseventinfoobjektid</code><a class="headerlink" href="#fire.api.model.sagstyper.SagseventInfoHtml.sagseventinfoobjektid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="fire.api.model.sagstyper.SagseventInfoMateriale">
+<em class="property">class </em><code class="sig-prename descclassname">fire.api.model.sagstyper.</code><code class="sig-name descname">SagseventInfoMateriale</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.model.sagstyper.SagseventInfoMateriale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.ext.declarative.api.Base</span></code></p>
+<dl class="py attribute">
+<dt id="fire.api.model.sagstyper.SagseventInfoMateriale.materiale">
+<code class="sig-name descname">materiale</code><a class="headerlink" href="#fire.api.model.sagstyper.SagseventInfoMateriale.materiale" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.sagstyper.SagseventInfoMateriale.objektid">
+<code class="sig-name descname">objektid</code><a class="headerlink" href="#fire.api.model.sagstyper.SagseventInfoMateriale.objektid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.sagstyper.SagseventInfoMateriale.sagseventinfo">
+<code class="sig-name descname">sagseventinfo</code><a class="headerlink" href="#fire.api.model.sagstyper.SagseventInfoMateriale.sagseventinfo" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.sagstyper.SagseventInfoMateriale.sagseventinfoobjektid">
+<code class="sig-name descname">sagseventinfoobjektid</code><a class="headerlink" href="#fire.api.model.sagstyper.SagseventInfoMateriale.sagseventinfoobjektid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="fire.api.model.sagstyper.Sagsinfo">
+<em class="property">class </em><code class="sig-prename descclassname">fire.api.model.sagstyper.</code><code class="sig-name descname">Sagsinfo</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.model.sagstyper.Sagsinfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#fire.api.model.RegisteringTidObjekt" title="fire.api.model.RegisteringTidObjekt"><code class="xref py py-class docutils literal notranslate"><span class="pre">fire.api.model.RegisteringTidObjekt</span></code></a></p>
+<dl class="py attribute">
+<dt id="fire.api.model.sagstyper.Sagsinfo.aktiv">
+<code class="sig-name descname">aktiv</code><a class="headerlink" href="#fire.api.model.sagstyper.Sagsinfo.aktiv" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.sagstyper.Sagsinfo.behandler">
+<code class="sig-name descname">behandler</code><a class="headerlink" href="#fire.api.model.sagstyper.Sagsinfo.behandler" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.sagstyper.Sagsinfo.beskrivelse">
+<code class="sig-name descname">beskrivelse</code><a class="headerlink" href="#fire.api.model.sagstyper.Sagsinfo.beskrivelse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.sagstyper.Sagsinfo.journalnummer">
+<code class="sig-name descname">journalnummer</code><a class="headerlink" href="#fire.api.model.sagstyper.Sagsinfo.journalnummer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.sagstyper.Sagsinfo.objektid">
+<code class="sig-name descname">objektid</code><a class="headerlink" href="#fire.api.model.sagstyper.Sagsinfo.objektid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.sagstyper.Sagsinfo.sag">
+<code class="sig-name descname">sag</code><a class="headerlink" href="#fire.api.model.sagstyper.Sagsinfo.sag" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.sagstyper.Sagsinfo.sagsid">
+<code class="sig-name descname">sagsid</code><a class="headerlink" href="#fire.api.model.sagstyper.Sagsinfo.sagsid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-fire.api.model">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-fire.api.model" title="Permalink to this headline">¶</a></h2>
+<p>SQLAlchemy models for the application</p>
+<dl class="py class">
+<dt id="fire.api.model.BetterBehavedEnum">
+<em class="property">class </em><code class="sig-prename descclassname">fire.api.model.</code><code class="sig-name descname">BetterBehavedEnum</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">enumtype</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.model.BetterBehavedEnum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.type_api.TypeDecorator</span></code></p>
+<p>SQLAlchemy ignorer som standard værdierne i tilknyttet labels i en Enum.
+Denne klasse sørger for at de korrekte værdier indsættes, sådan at</p>
+<p>Boolean.FALSE oversættes til 'false' og ikke 'FALSE'.</p>
+<dl class="py method">
+<dt id="fire.api.model.BetterBehavedEnum.process_bind_param">
+<code class="sig-name descname">process_bind_param</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em>, <em class="sig-param"><span class="n">dialect</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.model.BetterBehavedEnum.process_bind_param" title="Permalink to this definition">¶</a></dt>
+<dd><p>Receive a bound parameter value to be converted.</p>
+<p>Subclasses override this method to return the
+value that should be passed along to the underlying
+<code class="xref py py-class docutils literal notranslate"><span class="pre">TypeEngine</span></code> object, and from there to the
+DBAPI <code class="docutils literal notranslate"><span class="pre">execute()</span></code> method.</p>
+<p>The operation could be anything desired to perform custom
+behavior, such as transforming or serializing data.
+This could also be used as a hook for validating logic.</p>
+<p>This operation should be designed with the reverse operation
+in mind, which would be the process_result_value method of
+this class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> -- Data to operate upon, of any type expected by
+this method in the subclass.  Can be <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
+<li><p><strong>dialect</strong> -- the <code class="xref py py-class docutils literal notranslate"><span class="pre">Dialect</span></code> in use.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fire.api.model.BetterBehavedEnum.process_result_value">
+<code class="sig-name descname">process_result_value</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em>, <em class="sig-param"><span class="n">dialect</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.model.BetterBehavedEnum.process_result_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Receive a result-row column value to be converted.</p>
+<p>Subclasses should implement this method to operate on data
+fetched from the database.</p>
+<p>Subclasses override this method to return the
+value that should be passed back to the application,
+given a value that is already processed by
+the underlying <code class="xref py py-class docutils literal notranslate"><span class="pre">TypeEngine</span></code> object, originally
+from the DBAPI cursor method <code class="docutils literal notranslate"><span class="pre">fetchone()</span></code> or similar.</p>
+<p>The operation could be anything desired to perform custom
+behavior, such as transforming or serializing data.
+This could also be used as a hook for validating logic.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> -- Data to operate upon, of any type expected by
+this method in the subclass.  Can be <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
+<li><p><strong>dialect</strong> -- the <code class="xref py py-class docutils literal notranslate"><span class="pre">Dialect</span></code> in use.</p></li>
+</ul>
+</dd>
+</dl>
+<p>This operation should be designed to be reversible by
+the &quot;process_bind_param&quot; method of this class.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="fire.api.model.IntEnum">
+<em class="property">class </em><code class="sig-prename descclassname">fire.api.model.</code><code class="sig-name descname">IntEnum</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">enumtype</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.model.IntEnum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#fire.api.model.BetterBehavedEnum" title="fire.api.model.BetterBehavedEnum"><code class="xref py py-class docutils literal notranslate"><span class="pre">fire.api.model.BetterBehavedEnum</span></code></a></p>
+<p>Add an integer enum class</p>
+<dl class="py attribute">
+<dt id="fire.api.model.IntEnum.impl">
+<code class="sig-name descname">impl</code><a class="headerlink" href="#fire.api.model.IntEnum.impl" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.sqltypes.Integer</span></code></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="fire.api.model.Konfiguration">
+<em class="property">class </em><code class="sig-prename descclassname">fire.api.model.</code><code class="sig-name descname">Konfiguration</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.model.Konfiguration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.ext.declarative.api.Base</span></code></p>
+<p>Konfigurationstabel for FIRE.</p>
+<p>Tabellen har det særpræg at der kun kan indlæses en række i den.
+Den indeholder derfor altid den nye udgave af opsætningen. Tabellen
+er skabt for at kunne holde styr på systemspecifikke detaljer, der
+kan ændre sig over tid, fx basestier på et filsystem.</p>
+<dl class="py attribute">
+<dt id="fire.api.model.Konfiguration.dir_skitser">
+<code class="sig-name descname">dir_skitser</code><a class="headerlink" href="#fire.api.model.Konfiguration.dir_skitser" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fire.api.model.Konfiguration.objektid">
+<code class="sig-name descname">objektid</code><a class="headerlink" href="#fire.api.model.Konfiguration.objektid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="fire.api.model.RegisteringFraObjekt">
+<em class="property">class </em><code class="sig-prename descclassname">fire.api.model.</code><code class="sig-name descname">RegisteringFraObjekt</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.model.RegisteringFraObjekt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.ext.declarative.api.Base</span></code></p>
+<dl class="py attribute">
+<dt id="fire.api.model.RegisteringFraObjekt.objektid">
+<code class="sig-name descname">objektid</code><em class="property"> = Column(None, Integer(), table=None, primary_key=True, nullable=False)</em><a class="headerlink" href="#fire.api.model.RegisteringFraObjekt.objektid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="fire.api.model.RegisteringFraObjekt.registreringfra">
+<em class="property">property </em><code class="sig-name descname">registreringfra</code><a class="headerlink" href="#fire.api.model.RegisteringFraObjekt.registreringfra" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="fire.api.model.RegisteringTidObjekt">
+<em class="property">class </em><code class="sig-prename descclassname">fire.api.model.</code><code class="sig-name descname">RegisteringTidObjekt</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.model.RegisteringTidObjekt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.ext.declarative.api.Base</span></code></p>
+<dl class="py attribute">
+<dt id="fire.api.model.RegisteringTidObjekt.objektid">
+<code class="sig-name descname">objektid</code><em class="property"> = Column(None, Integer(), table=None, primary_key=True, nullable=False)</em><a class="headerlink" href="#fire.api.model.RegisteringTidObjekt.objektid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="fire.api.model.RegisteringTidObjekt.registreringfra">
+<em class="property">property </em><code class="sig-name descname">registreringfra</code><a class="headerlink" href="#fire.api.model.RegisteringTidObjekt.registreringfra" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="fire.api.model.RegisteringTidObjekt.registreringtil">
+<em class="property">property </em><code class="sig-name descname">registreringtil</code><a class="headerlink" href="#fire.api.model.RegisteringTidObjekt.registreringtil" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="fire.api.model.ReprBase">
+<em class="property">class </em><code class="sig-prename descclassname">fire.api.model.</code><code class="sig-name descname">ReprBase</code><a class="headerlink" href="#fire.api.model.ReprBase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Udvid SQLAlchemys Base klasse.</p>
+<p>Giver pænere repr() output. Modificeret fra StackOverflow:
+<a class="reference external" href="https://stackoverflow.com/a/54034962">https://stackoverflow.com/a/54034962</a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="fire.api.model.StringEnum">
+<em class="property">class </em><code class="sig-prename descclassname">fire.api.model.</code><code class="sig-name descname">StringEnum</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">enumtype</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.model.StringEnum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#fire.api.model.BetterBehavedEnum" title="fire.api.model.BetterBehavedEnum"><code class="xref py py-class docutils literal notranslate"><span class="pre">fire.api.model.BetterBehavedEnum</span></code></a></p>
+<p>Add an integer enum class</p>
+<dl class="py attribute">
+<dt id="fire.api.model.StringEnum.impl">
+<code class="sig-name descname">impl</code><a class="headerlink" href="#fire.api.model.StringEnum.impl" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.sqltypes.String</span></code></p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="fire.cli.html" class="btn btn-neutral float-right" title="fire.cli package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="fire.api.gama.html" class="btn btn-neutral float-left" title="fire.api.gama package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019, Asger Sigurd Skovbo Petersen, Björn Harrtell, Kristian Evers.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
